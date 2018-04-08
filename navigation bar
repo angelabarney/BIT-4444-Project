@@ -11,7 +11,9 @@
     <script src="js/bootstrap.min.js"></script>
 
   </head>
-
+<body>
+    <a href="http://www.bit.vt.edu"><img src="Hokiematchlogo.png" /></a>
+</body>
 
 <nav>
   <ul class="nav nav-pills">
