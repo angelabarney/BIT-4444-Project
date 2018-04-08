@@ -1,14 +1,6 @@
 body {background-color:orange}
 
-p.desp {
-  margin: 10px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: rgb(189, 92, 95);
-  padding: 20px;
-  background-color: orange;
-  box-shadow: 25px 25px 50px dimgrey;
-}
+
 nav {
   font-weight: bold;
   color: orange;
@@ -16,25 +8,4 @@ nav {
   width: 30em;
   background-color: maroon;
 }
-nav ul {
-  display: none;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-nav:hover ul {
-  display: block;
-}
-nav ul li {
-  border-top: 2px solid maroon;
-  background-color: orange;
-  font-style: italic;
-  width: 30em;
-  color:white;
-}
-nav ul li:hover{
-  background-color: white;
-  text-decoration: none;
-}
-
 
