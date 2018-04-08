@@ -15,9 +15,8 @@
 
 <nav>
   <ul class="nav nav-pills">
-    <li><a href="Barney_HW1_Home.html">Home</a></li>
         <a class="dropdown-toggle" data-toggle="dropdown" href="#"
-      role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
+      role="button" aria-haspopup="true" aria-expanded="false">Home<span class="caret"></span></a>
       <ul class="dropdown-menu">
         <li><a href="Barney_HW1_Members.html">Housing Option</a></li>
         <li><a href="Barney_HW1_History.html">Example Profile Match-Up</a></li>
