@@ -37,14 +37,4 @@ nav ul li:hover{
   text-decoration: none;
 }
 
-img {
-  position: relative;
-  animation: movingimage linear 10s 1s infinite normal;
-}
-@keyframes movingimage {
-  0% {opactiy: 0; left: 0px; top: 0px; }
-  25% {opacity: 1; left: 0px; top: 25px; }
-  50% {opacity: 0; left: 25px; top: 25px;}
-  75% {opacity: 1; left: 25px; top: 0px;}
-  100% {opacity: 0; left: 0px; top:0px; }
-}
+
