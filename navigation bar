@@ -13,7 +13,7 @@
 
   </head>
 <body>
-    <a href="http://www.bit.vt.edu"><img src="Hokiematchlogo.png" /></a>
+    <a href="HMHome.html"><img src="Hokiematchlogo.png"  HEIGHT="75" WIDTH="250" /></a>
     
       <a href="HMStudentLogin.html">Log In</a>
 </body>
