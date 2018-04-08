@@ -22,6 +22,14 @@
         <li><a href="Barney_HW1_Members.html">Housing Option</a></li>
         <li><a href="Barney_HW1_History.html">Example Profile Match-Up</a></li>
       </ul>
+      
+      <li><a href="Barney_HW1_Home.html">Personal Information</a></li>
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#"
+      role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <li><a href="Barney_HW1_Members.html">Housing Option</a></li>
+        <li><a href="Barney_HW1_History.html">Example Profile Match-Up</a></li>
+      </ul>
     <li><a href="Barney_HW1_Registration.html">Registration</a></li>
     <li class="active" role="presentation" class="dropdown">
       <a class="dropdown-toggle" data-toggle="dropdown" href="#"
