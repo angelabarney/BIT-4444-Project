@@ -1,1 +1,49 @@
 
+p.desp {
+  margin: 10px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgb(189, 92, 95);
+  padding: 20px;
+  background-color: orange;
+  box-shadow: 25px 25px 50px dimgrey;
+}
+nav {
+  font-weight: bold;
+  color: orange;
+  text-align: center;
+  width: 30em;
+  background-color: maroon;
+}
+nav ul {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav:hover ul {
+  display: block;
+}
+nav ul li {
+  border-top: 2px solid maroon;
+  background-color: orange;
+  font-style: italic;
+  width: 30em;
+  color:white;
+}
+nav ul li:hover{
+  background-color: white;
+  text-decoration: none;
+}
+
+img {
+  position: relative;
+  animation: movingimage linear 10s 1s infinite normal;
+}
+@keyframes movingimage {
+  0% {opactiy: 0; left: 0px; top: 0px; }
+  25% {opacity: 1; left: 0px; top: 25px; }
+  50% {opacity: 0; left: 25px; top: 25px;}
+  75% {opacity: 1; left: 25px; top: 0px;}
+  100% {opacity: 0; left: 0px; top:0px; }
+}
