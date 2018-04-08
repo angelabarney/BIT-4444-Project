@@ -9,3 +9,21 @@ nav {
   background-color: maroon;
 }
 
+
+nav ul li {
+  border-top: 2px solid maroon;
+  background-color:maroon;
+  font-style: italic;
+
+}
+nav ul li li {
+  border-top: 2px solid maroon;
+  background-color:orange;
+  font-style: italic;
+  color: orange
+}
+
+nav ul li:hover{
+  background-color: orange;
+  text-decoration: none;
+}
