@@ -1,4 +1,17 @@
 
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Home:SHH</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+  </head>
+
+
 <nav>
   <ul class="nav nav-pills">
     <li><a href="Barney_HW1_Home.html">Home</a></li>
