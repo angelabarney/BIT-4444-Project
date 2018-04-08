@@ -18,6 +18,7 @@
         <a class="dropdown-toggle" data-toggle="dropdown" href="#"
       role="button" aria-haspopup="true" aria-expanded="false">Home<span class="caret"></span></a>
       <ul class="dropdown-menu">
+        <li><a href="Barney_HW1_Members.html">Home</a></li>
         <li><a href="Barney_HW1_Members.html">Housing Option</a></li>
         <li><a href="Barney_HW1_History.html">Example Profile Match-Up</a></li>
       </ul>
@@ -26,9 +27,12 @@
         <a class="dropdown-toggle" data-toggle="dropdown" href="#"
       role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
       <ul class="dropdown-menu">
-        <li><a href="Barney_HW1_Members.html">Housing Option</a></li>
-        <li><a href="Barney_HW1_History.html">Example Profile Match-Up</a></li>
+        <li><a href="Barney_HW1_Members.html">Personal Information</a></li>
+        <li><a href="Barney_HW1_Members.html">Roommate Preferences</a></li>
+        <li><a href="Barney_HW1_History.html">Apartment Preferences</a></li>
+        <li><a href="Barney_HW1_Members.html">Match-Up</a></li>
       </ul>
+      
     <li><a href="Barney_HW1_Registration.html">Registration</a></li>
     <li class="active" role="presentation" class="dropdown">
       <a class="dropdown-toggle" data-toggle="dropdown" href="#"
