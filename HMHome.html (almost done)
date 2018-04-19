@@ -116,13 +116,18 @@ p.desp {
   border-style: solid;
   border-color: maroon;
   padding: 20px;
-  background-color: orange;
+  background-color: #FFC86E     ;
   box-shadow: 25px 25px 50px dimgrey;
 }
 p.tilt{
   image-orientation: 45deg;
 }
 
+.tbl	{ margin-left: .75in;
+      margin-top: .50in;
+      padding: 100px;
+      border-spacing: 400px;
+    }
 
 
 </style>
@@ -140,11 +145,16 @@ We are here to make it easier for you to find a roommates that is your <em>"Perf
 
 <br />
 
+<table class="tbl" style="width:70%"">
+  <tr>
+    <td> <img src="group.png" alt="" HEIGHT="300" WIDTH="300"</td>
+    <td><img src="group1.png" alt="" HEIGHT="300" WIDTH="350"</td>
+    <td><img src="group3.jpg" alt="" HEIGHT="300" WIDTH="250"</td>
+  </tr>
+</table>
 
 
-<img src="group.png" alt=""   class="tilt" HEIGHT="300" WIDTH="300"/>
-<img src="group1.png" alt="" HEIGHT="300" WIDTH="350"/>
-<img src="group3.jpg" alt=""  HEIGHT="300" WIDTH="250"/>
+
 
 </p>
 
