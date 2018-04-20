@@ -195,16 +195,16 @@ FIND YOUR PERFECT APARTMENT! </h1> </center>
       Apartments <span class="caret"></span>
     </a>
           <ul class="dropdown-menu">
+            <li role="presentation"><a href="#TV">Terrace View </a></li>
             <li role="presentation"><a href="#Edge">Edge</a></li>
             <li role="presentation"><a href="#CS">Collegiate Suites</a></li>
             <li role="presentation"><a href="#HR">Hunters Ridge<a></li>
-              <li role="presentation"><a href="#TV">Terrace View </a></li>
             <li role="presentation"><a href="#Village">Village</a></li>
             <li role="presentation"><a href="#Retreat">Retreat</a></li>
           </ul>
         </li>
 
-
+    
 
         <br>
         </br>
