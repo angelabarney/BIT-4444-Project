@@ -1,0 +1,522 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HokieMatch: Housing Options </title>
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+  <script src="jquery-3.1.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+
+
+  <a href="HMHousing.html"><img src="Hokiematchlogo.png"  HEIGHT="75" WIDTH="250" /></a>
+
+  <a  href="HMStudentlogin.html" align="right">Studfffent Log In</a>
+
+
+
+
+  <p>
+
+
+    <nav>
+      <ul class="nav nav-pills">
+        <li role="presentation" class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+      Home <span class="caret"></span>
+    </a>
+          <ul class="dropdown-menu">
+            <li role="presentation"><a href="#">Home</a></li>
+            <li role="presentation"><a href="#">Housing Option</a></li>
+            <li role="presentation"><a href="#">Example Profile Match-Up</a></li>
+          </ul>
+        </li>
+
+        <li role="presentation" class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+    Personal Information <span class="caret"></span>
+  </a>
+          <ul class="dropdown-menu">
+            <li role="presentation"><a href="#">Personal Information</a></li>
+            <li role="presentation"><a href="#">Roommate Preferences</a></li>
+            <li role="presentation"><a href="#">Apartment Preferences</a></li>
+          </ul>
+        </li>
+
+        <li role="presentation" class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+  Admin Login <span class="caret"></span>
+</a>
+          <ul class="dropdown-menu">
+            <li role="presentation"><a href="#">Admin Login</a></li>
+            <li role="presentation"><a href="#">Profile Management</a></li>
+            <li role="presentation"><a href="#">Student Profiles</a></li>
+            <li role="presentation"><a href="#">Apartment Editing</a></li>
+            <li role="presentation"><a href="#">Apartment Renewal</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </nav>
+    <br />
+    <br />
+  </p>
+
+  <font color="maroon" size="4" ; style="font-family:impact;" </font>
+
+
+
+    <h1> <center>
+
+
+
+FIND YOUR PERFECT APARTMENT! </h1> </center>
+
+
+
+    <style>
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 4px;
+      }
+
+      /* Create two equal columns that sits next to each other */
+
+      .tbl {
+        margin-left: .50in;
+        margin-top: .50in;
+
+        padding: 15px;
+        border-spacing: 100px;
+      }
+
+      .table2 {
+        margin-left: .50in;
+
+        border: 4px solid maroon;
+        padding: 15px;
+        border-spacing: 100px;
+      }
+
+      p.desp {
+        margin: 10px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #0099e6;
+        padding: 20px;
+        background-color: #e6f7ff;
+        box-shadow: 25px 25px 50px dimgrey;
+      }
+
+      p.desp2 {
+        margin: 10px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #FAD802;
+        padding: 20px;
+        background-color: #ECFD73;
+        box-shadow: 25px 25px 50px dimgrey;
+      }
+
+      p.desp3 {
+        margin: 10px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #368C03;
+        padding: 20px;
+        background-color: #B7F194;
+        box-shadow: 25px 25px 50px dimgrey;
+      }
+
+      p.desp4 {
+        margin: 10px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #C03404;
+        padding: 20px;
+        background-color: #F57F56;
+        box-shadow: 25px 25px 50px dimgrey;}
+
+        p.desp5 {
+          margin: 10px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: #03DEBA;
+          padding: 20px;
+          background-color: #85FFEB;
+          box-shadow: 25px 25px 50px dimgrey;
+}
+
+
+          p.desp6 {
+            margin: 10px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #70029C;
+            padding: 20px;
+            background-color: #D27BF5;
+            box-shadow: 25px 25px 50px dimgrey;
+          }
+      }
+      .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
+
+      div.transbox {
+        margin: 30px;
+        background-color: #ffffff;
+        border: 3px solid maroon;
+        opacity: 0.6;
+        padding: 10px;
+        filter: alpha(opacity=60);
+        width: 300px;
+
+      }
+    </style>
+
+    <p>
+
+
+
+      <ul class="nav nav-pills">
+        <li role="presentation" class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+      Apartments <span class="caret"></span>
+    </a>
+          <ul class="dropdown-menu">
+            <li role="presentation"><a href="#TV">Terrace View </a></li>
+            <li role="presentation"><a href="#Edge">Edge</a></li>
+            <li role="presentation"><a href="#CS">Collegiate Suites</a></li>
+            <li role="presentation"><a href="#HR">Hunters Ridge<a></li>
+            <li role="presentation"><a href="#Village">Village</a></li>
+            <li role="presentation"><a href="#Retreat">Retreat</a></li>
+          </ul>
+        </li>
+
+
+
+        <br>
+        </br>
+
+      <h2><strong>Terrace View!</strong></h2>
+
+        <p class="desp" id="TV">
+
+          Description: "Terrace View Apartments luxury apartments for rent in Blacksburg, VA offers 1, 2, 3 and 4 bedroom apartments and townhomes for rent. At Terrace View Apartments, we focus on what's really important - YOU! Living here, you'll be less than
+          1 mile from Virginia Tech, have access to 14 bus stops and a bike lane to campus, close to local hot spots, shopping, Route 460, and more! You can choose from a variety of floor plans to suit your personal style. Townhomes and Garden Apartments
+          are available in many sizes, with a multitude of options. You will discover what Simply Better Living is when you experience the carefree lifestyle you deserve." -Terrace View
+<br />
+          For more information:
+          <a href="https://www.terraceviewapartments.com/Gallery.aspx">(Click this link)</a>
+        </p>
+
+    <center <table class="tbl">
+      <tr>
+        <td> <img src="tv1.jpg" alt="" HEIGHT="300" WIDTH="425" </td>
+
+          <td><img src="tv3.jpg" alt="" HEIGHT="300" WIDTH="450" </td>
+            <td><img src="tv2.jpg" alt="" HEIGHT="300" WIDTH="350" </td>
+      </tr>
+      </table>
+    </center>
+
+<br />
+<center>Location: between Patrick Henry and Toms Creek</center>
+<br />
+<center>Management: Asset Campus Housing</center>
+<br />
+<center>Phone: 540-552-2996
+</center>
+<br />
+<center>Fax: 540-552-2135</center>
+<br />
+<center>Lease: 1 Year</center>
+<br />
+<center>Security Deposit: Yes</center>
+<br />
+<center>Pets: Yes, with Deposit, Restrictions Apply</center>
+  <br/>
+<center>
+  Price Range: $400-$550
+  </br>
+</center>
+
+<h2><strong>The Edge!</strong></h2>
+
+<p class="desp2" id="Edge">
+
+  Description: "Live on The Edge of VT Campus! Individual leases with water, sewer ,trash, single stream recycling, electric allowance, cable
+  and internet included in rent. State-of-the-art amenities include a clubhouse with complimentary Starbucks coffee
+  machine and snack bar, pool tables, study rooms, video collaboration room, stand up tanning beds, fitness center with yoga/spinning room, s
+  and volleyball court, gas grills and heated pool with resort style sun deck. " -The Edge
+
+   <br />
+          For more information:
+          <a href="https://www.cmgleasing.com/office/the-edge/">(Click this link)</a>
+
+
+
+
+
+</p>
+<center <table class="tbl">
+  <tr>
+    < <td> <img src="edge1.jpg" alt="" HEIGHT="300" WIDTH="425" </td>
+      <td><img src="edge2.jpg" alt="" HEIGHT="300" WIDTH="350" </td>
+        <td><img src="edge3.jpg" alt="" HEIGHT="300" WIDTH="450" </td>
+  </tr>
+
+
+  </table>
+</center>
+</body>
+
+</html>
+
+<br />
+<center>Location: on Toms Creek</center>
+<br />
+<center>Management: CMG Leasing
+</center>
+<br />
+<center>Phone: 540-552-3343
+</center>
+<br />
+<center>Fax: 855-863-4460
+</center>
+<center>Lease: 1 Year
+</center>
+<br />
+<center>
+  Security Deposit: $400</center>
+<br />
+<center>
+  Pets: No
+  </br>
+</center>
+<br />
+
+<center>
+  Price Range: $600-$800
+  </br>
+
+</center>
+
+<p>
+
+
+  <h2><strong>Collegiate Suites!</strong></h2>
+
+  <p class="desp3" id="CS">
+
+   Description:
+   "Experience off-campus living at its best.  'All Suites' Four-, Two- and One-Bedroom floor
+   plans feature private baths.  Close to Virginia Tech. It's where your friends are!"- Collegiate Suites   
+
+     <br />
+            For more information:
+            <a href="http://www.collegiatesuites.reslisting.com/">(Click this link)</a>
+
+
+
+  </p>
+  <center
+  <table class="tbl">
+   <tr>
+     <td> <img src="coll1.jpg" alt="" HEIGHT="300" WIDTH="425"</td>
+
+     <td><img src="coll2.jpg" alt="" HEIGHT="300" WIDTH="420"</td>
+       <td><img src="coll3.jpg" alt="" HEIGHT="300" WIDTH="450"</td>
+   </tr>
+
+  </table>
+
+  </center>
+
+  <br />
+  <center>Location: On Patrick Henry Drive</center>
+  <br />
+  <center>Management: University Management, Inc.</center>
+  <br />
+  <center>Phone: 540-951-5161</center>
+  <br />
+  <center>Fax: 540-951-8826</center>
+<br />
+  <center>Lease: 1 Year</center>
+  <br />
+  <center> Security Deposit: $250-$300</center>
+  <br />
+  <center> Pets: No
+  </br>
+  </center>
+  <br />
+  <center> Price Range: $400-$550
+  </br>
+  </center>
+
+
+  <h2><strong>Hunters Ridge!</strong></h2>
+
+    <p class="desp4" id="HR">
+
+      Description: "Experience off-campus housing at its best.  Recently renovated four-bedroom, two bath apartments
+       are eco-friendly and energy-efficient.  Campus is not far, and all your friends are right here." -Hunters Ridge
+
+       <br />
+              For more information:
+              <a href="http://www.huntersridge.reslisting.com/">(Click this link)</a>
+    </p>
+
+  <center <table class="tbl">
+  <tr>
+    <td> <img src="HR1.jpg" alt="" HEIGHT="300" WIDTH="425" </td>
+
+      <td><img src="HR2.png" alt="" HEIGHT="300" WIDTH="450" </td>
+        <td><img src="HR3.jpg" alt="" HEIGHT="300" WIDTH="350" </td>
+  </tr>
+  </table>
+  </center>
+
+  <br />
+  <center>Location: On Patrick Henry Drive</center>
+  <br />
+  <center>Management: University Management, Inc.</center>
+  <br />
+  <center>Phone: 540-951-5161</center>
+  <br />
+  <center>Fax: 540-951-8826</center>
+<br />
+  <center>Lease: 1 Year</center>
+  <br />
+  <center> Security Deposit: $250-$300</center>
+  <br />
+  <center> Pets: No
+  </br>
+  </center>
+  <br />
+  <center> Price Range: $400-$500
+  </br>
+  </center>
+
+  <h2><strong>Village!</strong></h2>
+
+    <p class="desp5" id="Village">
+
+      Description: "Built around the way you want to live, The Village at Blacksburg provides the features you enjoy and the
+      convenience you deserve, all in the best location at Virginia Tech." -The Village
+<br />
+       For more information:
+       <a href="http://live-thevillage.com/features/">(Click this link)</a>
+    </p>
+
+  <center <table class="tbl">
+  <tr>
+    <td> <img src="vill1.jpg" alt="" HEIGHT="300" WIDTH="425" </td>
+
+      <td><img src="vill2.jpg" alt="" HEIGHT="300" WIDTH="450" </td>
+        <td><img src="vill3.jpg" alt="" HEIGHT="300" WIDTH="400" </td>
+  </tr>
+  </table>
+  </center>
+
+  <br />
+  <center>Location: On Patrick Henry Drive</center>
+  <br />
+  <center>Management: The Scion Group</center>
+  <br />
+  <center>Phone: (540) 953-1800</center>
+  <br />
+
+  <center>Lease: 1 Year</center>
+  <br />
+  <center> Security Deposit: $250-$300</center>
+  <br />
+  <center> Pets: No
+  </br>
+  </center>
+  <br />
+  <center> Price Range: $500-$650
+  </br>
+  </center>
+
+  <h2><strong>The Retreat!</strong></h2>
+
+    <p class="desp6" id="Retreat">
+
+      Description: "The Retreat at Blacksburg is the most talked about cottage community serving the student community at Virginia Polytechnic
+      Institute and State University in Blacksburg, VA. Our residents love our amenities and proximity to their classes!
+
+At The Retreat at Blacksburg, moving into your new apartment has never been easier. Walk into your fully furnished cottage-style apartment
+for the first time and know that the hard part is already done- your lights are already on, and if you choose one of our gorgeous and
+convenient furnished packages- your furniture is set up and your modern appliances are installed. With all that extra free time,
+how about hanging out around our cozy fire pit with your new neighbors! " -The Retreat
+
+       <br />
+              For more information:
+              <a href="http://www.retreatatblacksburg.com/">(Click this link)</a>
+           </p>
+
+  <center <table class="tbl">
+  <tr>
+    <td> <img src="retreat1.jpeg" alt="" HEIGHT="300" WIDTH="425" </td>
+
+      <td><img src="retreat2.jpeg" alt="" HEIGHT="300" WIDTH="450" </td>
+        <td><img src="retreat3.jpeg" alt="" HEIGHT="300" WIDTH="400" </td>
+  </tr>
+  </table>
+  </center>
+
+  <br />
+  <center>Location: Off of Redd Road</center>
+  <br />
+  <center>Management: The Retreat</center>
+  <br />
+  <center>Phone: (540)-324-5836</center>
+  <br />
+
+  <center>Lease: 1 Year</center>
+  <br />
+  <center> Security Deposit: Yes</center>
+  <br />
+  <center> Pets: Yes
+  </br>
+  </center>
+  <br />
+  <center> Price Range: $600-$800
+  </br>
+  </center>
+
+
+  </P>
+  <div class="background">
+    <div class="transbox">
+      <p>Which one do you want to see again!
+        <ol>
+          <li><a href="#TV">Terrace View </a></li>
+          <li><a href="#Edge">Edge</a></li>
+          <li><a href="#CS">Collegiate Suites</a></li>
+          <li><a href="#HR">Hunters Ridge<a></li>
+
+          <li><a href="#Village">Village</a></li>
+          <li><a href="#Retreat">Retreat</a></li>
+        </ol>
+
+    </div>
+  </div>
+
+
+</body>
+
+</html>
