@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Apartment Renewal </title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+      <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+    <script src="jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+
+    function checkForm(event) {
+      var frmObject = document.forms[0];
+      badStr="You must fill in a value for:\n";
+      notFinished=false;
+
+      //validate radio buttons
+      if(isUncheckedRB(frmObject.membership)) notFinished=true;
+      if(isUncheckedRB(frmObject.payment)) notFinished = true;
+      if(isUncheckedRB(frmObject.renew)){
+        notFinished=true;
+      } else {
+        //validate text box
+        if(isBlankField(frmObject.nonrenew)) notFinished=true;
+      }}
+      console.log(notFinished);
+      if(notFinished) {
+        alert(badStr);
+        event.preventDefault();
+        return false;
+      }
+      else {
+        alert("Input validated");
+        return true;
+      }
+    }
+    
+    </script>
+  </head>
+<body>
+    <a href="HMHome.html"><img src="Hokiematchlogo.png"  HEIGHT="75" WIDTH="250" /></a>
+
+     <a  href="HMStudentlogin.html" align="right">Student Log In</a>
+<nav>
+  <ul class="nav nav-pills">
+    <li role="presentation" class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+      Home <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li role="presentation"><a href="#">Home</a></li>
+      <li role="presentation"><a href="#">Housing Option</a></li>
+      <li role="presentation"><a href="#">Example Profile Match-Up</a></li>
+    </ul>
+  </li>
+
+  <li role="presentation" class="dropdown">
+  <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+    Personal Information <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu">
+    <li role="presentation"><a href="#">Personal Information</a></li>
+    <li role="presentation"><a href="#">Roommate Preferences</a></li>
+    <li role="presentation"><a href="#">Apartment Preferences</a></li>
+  </ul>
+</li>
+
+<li role="presentation" class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+  Admin Login <span class="caret"></span>
+</a>
+<ul class="dropdown-menu">
+  <li role="presentation"><a href="#">Admin Login</a></li>
+  <li role="presentation"><a href="#">Profile Management</a></li>
+  <li role="presentation"><a href="#">Student Profiles</a></li>
+  <li role="presentation"><a href="#">Apartment Editing</a></li>
+  <li role="presentation"><a href="#">Apartment Renewal</a></li>
+</ul>
+</li>
+  </ul>
+</nav>
+
+<h3>Please enter all desired information:</h3>
+<form name="apartmentMembership" method="post" action="success.html">
+
+
+<div><strong>Are you renewing your membership?(If no, please explain why.)</strong></div>
+<br />
+<input type="radio" name="renew" value="yes" />Yes
+<input type="radio" name="renew" value="no" />No<br />
+<br />
+
+
+	<div><strong>What kind of membership would you like?</strong></div>
+	<input type="radio" name="membership" value="1-year" />1-Year<br />
+	<input type="radio" name="membership" value="2-year" />2-Year<br />
+  <input type="radio" name="membership" value="Custom" />Custom<br />
+  <br />
+
+  <div><strong>How will you be paying?</strong></div>
+  <input type="radio" name="payment" value="Cash" />Cash<br />
+  <input type="radio" name="payment" value="Credit" />Credit<br />
+  <input type="radio" name="payment" value="Check" />Check<br />
+
+  <div id="test">
+    Please explain why you are not renewing your membership:<br />
+    <input type="text" name="nonrenew" value="non"
+  </div>
+
+  <br />
+  <br />
+  <input type="submit" name="button1" value="Submit" />
+  </form>
+</body>
+</html>
