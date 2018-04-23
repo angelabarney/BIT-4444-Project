@@ -10,6 +10,16 @@
       <link rel="stylesheet" type="text/css" href="stylesheet.css" />
     <script src="jquery-3.1.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+
+    $(document).ready(function(){
+        $("#img1").hover(function(){
+            $("#img1").attr("src", "image1.jpg");
+        }, function(){
+        $(idimg).attr("src", "image2.jpg");
+      });
+    });
+    </script>
 
   </head>
 <body>
@@ -18,7 +28,7 @@
 
     <a href="HMHome.html"><img src="Hokiematchlogo.png"  HEIGHT="75" WIDTH="250" /></a>
 
-<a  href="HMStudentlogin.html" align="right">Student Log In</a>
+    <a  href="HMStudentlogin.html" align="right">Student Log In</a>
 
 
 
@@ -110,37 +120,46 @@ p.tilt{
       border-spacing: 200px;
     }
 
+    p.examp {
+      margin: 10px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: #C03404;
+      padding: 20px;
+      background-color: #F57F56;
+      box-shadow: 25px 25px 50px dimgrey;
+    }
+
 
 </style>
 
+<center>
 
-  <center
 
-  <center <table class="tbl">
+ <table class="tbl">
     <tr>
-      <td> <img src="person3.png" alt="" HEIGHT="400" WIDTH=300" </td>
-
-        <td><h3>You and Angela Barney
-          <br />
-           have been paired up
-           <br />
-
-           to be roommates  </h3>   </td>
-          <td><img src="person11.png" alt="" HEIGHT="400" WIDTH="300" </td>
+      <td><img src="image1.jpg" id="img1" HEIGHT="400" WIDTH=300" </td>
+      <td>You and Angela Barney <br />have been paired up to be roommates<br />
+      at Terrace View apartments!<br />Read below to find more information!</td>
+      <td><img src="image2.jpg" id= "img2" HEIGHT="400" WIDTH="300" </td>
+    </tr>
+    <tr>
+      <td>
+      <p class = "examp">
+        You both were looking for:
+        <ul>
+          <li>No Pets</li>
+          <li>3 Bedrooms</li>
+          <li>2 Bathrooms</li>
+          <li>Pool and Gym Amenities</li>
+          <li>Rent around $500/month</li>
+        </ul>
+      </p>
+      </td>
     </tr>
     </table>
-  </center>
 
 
-
-
-</center>
-
-
-
-
-</p>
-
-
+    </center>
 </body>
 </html>
