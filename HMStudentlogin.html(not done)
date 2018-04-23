@@ -73,6 +73,33 @@
 
 <font color="maroon"  style="font-family:impact;" ><h1> <center>
 
+  <body>
+    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" >
+      <label>Username:
+        <input type="text" name="username" value="<?php
+          if(!empty($username))
+            echo $username;
+        ?>"
+      </label><br />
+      <label>Password:
+        <input type="text" name="password" value="<?php
+          if(!empty($password))
+            echo $password;
+        ?>" />
+      </label><br />
+      <input type="submit" name="submit" value="Login" />
+  </body>
+
+
+
+</p>
+
+
+</body>
+
+
+
+</html>
   <?php
 
   $username="";
@@ -109,7 +136,7 @@
           $_SESSION["username"] = $username;
           $_SESSION["password"] = $row["password"];
 
-          Header("Location: HMAfterstudentlogin.php");
+          Header("Location: HMHousingoptions.html");
         } elseif (!$loginOK) {
           echo "<p>Make sure you have entered the correct information.</p>";
         }
@@ -119,33 +146,7 @@
       }
     }
   }
+
+
+
   ?>
-
-  <!doctype html>
-  <head>
-    <title>Homework 6 Question 2</title>
-  </head>
-  <body>
-    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" >
-      <label>Username:
-        <input type="text" name="username" value="<?php
-          if(!empty($username))
-            echo $username;
-        ?>"
-      </label><br />
-      <label>Password:
-        <input type="text" name="password" value="<?php
-          if(!empty($password))
-            echo $password;
-        ?>" />
-      </label><br />
-      <input type="submit" name="submit" value="Login" />
-  </body>
-
-
-
-</p>
-
-
-</body>
-</html>
