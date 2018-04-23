@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>HokieMatch: Home </title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+      <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+    <script src="jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+  </head>
+<body>
+    <a href="http://www.bit.vt.edu"><img src="Hokiematchlogo.png" /></a>
+
+      <a href="HMStudentLogin.html">Log In</a>
+
+<nav>
+  <ul class="nav nav-pills">
+    <li role="presentation" class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+      Home <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li role="presentation"><a href="#">Home</a></li>
+      <li role="presentation"><a href="#">Housing Option</a></li>
+      <li role="presentation"><a href="#">Example Profile Match-Up</a></li>
+    </ul>
+  </li>
+
+  <li role="presentation" class="dropdown">
+  <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+    Personal Information <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu">
+    <li role="presentation"><a href="#">Personal Information</a></li>
+    <li role="presentation"><a href="#">Roommate Preferences</a></li>
+    <li role="presentation"><a href="#">Apartment Preferences</a></li>
+  </ul>
+</li>
+
+<li role="presentation" class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+  Admin Login <span class="caret"></span>
+</a>
+<ul class="dropdown-menu">
+  <li role="presentation"><a href="#">Admin Login</a></li>
+  <li role="presentation"><a href="#">Profile Management</a></li>
+  <li role="presentation"><a href="#">Student Profiles</a></li>
+  <li role="presentation"><a href="#">Apartment Editing</a></li>
+  <li role="presentation"><a href="#">Apartment Renewal</a></li>
+</ul>
+</li>
+  </ul>
+</nav>
+
+<h2>Personal Information</h2>
+<img src="blankprofile.png" height="150" width="150"/>
+<p>Change Profile Picture</p>
+<form method="post" action="">
+<table>
+<tr>
+  <td>First Name: </td>
+  <td><input name="Fname" type="text" size="20" /></td>
+</tr>
+<tr>
+  <td>Last Name: </td>
+  <td><input name="Lname" type="text" size="20" /></td>
+</tr>
+<tr>
+  <td>Date of Birth: </td>
+  <td><input name="Birthdate" type="date" /></td>
+</tr>
+<tr>
+  <td>Hometown: </td>
+  <td><input name="Hometown" type="text" size="20" /></td>
+</tr>
+</table>
+</form>
+
+<h2>Virginia Tech Information</h2>
+<table>
+  <tr>
+    <td>VT email: </td>
+    <td><input type="email" name="email" size="20" /></td>
+  </tr>
+  <tr>
+    <td>Graduation Date: </td>
+    <td><input name="Graduation" type="date" /></td>
+  </tr>
+  <tr>
+    <td>Major: </td>
+    <td><select name="major">
+    <option>Agriculture</option>
+    <option>Architecture</option>
+    <option>Business</option>
+    <option>Engineering</option>
+    <option>Liberal Arts</option>
+    <option>Natural Resources</option>
+    <option>Science</option>
+    </select>
+  </tr>
+</table>
+
+<input type="submit" value="Update" />
+
+</body>
+</html>
