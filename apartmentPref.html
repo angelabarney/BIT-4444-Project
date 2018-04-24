@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>HokieMatch: Home </title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+      <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+    <script src="jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+  </head>
+<body>
+    <a href="http://www.bit.vt.edu"><img src="Hokiematchlogo.png" /></a>
+
+      <a href="HMStudentLogin.html">Log In</a>
+
+<nav>
+  <ul class="nav nav-pills">
+    <li role="presentation" class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+      Home <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li role="presentation"><a href="#">Home</a></li>
+      <li role="presentation"><a href="#">Housing Option</a></li>
+      <li role="presentation"><a href="#">Example Profile Match-Up</a></li>
+    </ul>
+  </li>
+
+  <li role="presentation" class="dropdown">
+  <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+    Personal Information <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu">
+    <li role="presentation"><a href="#">Personal Information</a></li>
+    <li role="presentation"><a href="#">Roommate Preferences</a></li>
+    <li role="presentation"><a href="#">Apartment Preferences</a></li>
+  </ul>
+</li>
+
+<li role="presentation" class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+  Admin Login <span class="caret"></span>
+</a>
+<ul class="dropdown-menu">
+  <li role="presentation"><a href="#">Admin Login</a></li>
+  <li role="presentation"><a href="#">Profile Management</a></li>
+  <li role="presentation"><a href="#">Student Profiles</a></li>
+  <li role="presentation"><a href="#">Apartment Editing</a></li>
+  <li role="presentation"><a href="#">Apartment Renewal</a></li>
+</ul>
+</li>
+  </ul>
+</nav>
+
+<h2>Apartment Preferences</h2>
+<form method="post" action="post">
+  <label>Desired Budget (per month):
+  <input name="budget" type="number" size="25" />
+  </label><br />
+
+  <label>Distance from Campus:
+    <select name="distance">
+      <option>Downtown</option>
+      <option>On Campus</option>
+      <option>1 mile away</option>
+      <option>5 miles away</option>
+    </select></label><br />
+
+  <strong>Bus Stop?</strong>
+    <label>Yes
+    <input name="bus" type="radio" value="yes" />
+    </label>
+    <label>No
+    <input name="bus" type="radio" value="no" />
+  </label><br />
+
+    <label>Number of Rooms:
+    <input type="number" min="1" max="4" step="1" value="4" />
+    </label><br />
+
+    <label>Number of Bathrooms:
+    <input type="number" min="1" max="4" step="1" value="4" />
+    </label><br />
+
+    <strong>Amenities:</strong> <br />
+    <label>Pool
+    <input name="amenities" type="checkbox" value="Pool" />
+    </label>
+    <label>Gym
+    <input name="amenities" type="checkbox" value="Gym" />
+    </label>
+    <label>Grill Area
+    <input name="amenities" type="checkbox" value="Grill Area" />
+    </label>
+    <label>Courts
+    <input name="amenities" type="checkbox" value="Courts" />
+    </label>
+    <label>Parking
+    <input name="amenities" type="checkbox" value="Parking" />
+  </label><br />
+</form>
+
+<input type="Submit" value="Update" />
+
+</body>
+</html>
