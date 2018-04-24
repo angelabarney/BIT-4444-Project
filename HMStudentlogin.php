@@ -1,3 +1,54 @@
+<?php
+
+$username="";
+$password="";
+$remember="no";
+$error = false;
+$loginOK = null;
+
+if(isset($_POST["submit"])){
+  if(isset($_POST["username"])) $username=$_POST["username"];
+  if(isset($_POST["password"])) $password=$_POST["password"];
+  if(isset($_POST["remember"])) $remember=$_POST["remember"];
+
+  if(empty($username) || empty($password)) {
+    $error=true;
+  }
+
+  if (!$error) {
+    require_once("db.php");
+    $sql = "select username, password from login WHERE username='$username' and password='$password'";
+    $result = $mydb->query($sql);
+
+    $row=mysqli_fetch_array($result);
+
+    if ($row){
+      if (strcmp($username, $row["username"]) == 0 && strcmp($password, $row["password"]) == 0) {
+        $loginOK = true;
+      } else {
+        $loginOK = false;
+      }
+
+      if($loginOK) {
+        //echo "here";
+        session_start();
+        $_SESSION["username"] = $username;
+        $_SESSION["password"] = $row["password"];
+
+        Header("Location: HMHousingoptions.html");
+      } elseif (!$loginOK) {
+        echo "<p>Make sure you have entered the correct information.</p>";
+      }
+
+    } else {
+      echo "<p>The username does not exist.</p>";
+    }
+  }
+}
+
+
+
+?>
 <!doctype html>
 <html>
 <head>
@@ -99,53 +150,3 @@
 
 
 </html>
-  <?php
-
-  $username="";
-  $password="";
-  $remember="no";
-  $error = false;
-  $loginOK = null;
-
-  if(isset($_POST["submit"])){
-    if(isset($_POST["username"])) $username=$_POST["username"];
-    if(isset($_POST["password"])) $password=$_POST["password"];
-    if(isset($_POST["remember"])) $remember=$_POST["remember"];
-
-    if(empty($username) || empty($password)) {
-      $error=true;
-    }
-
-    if (!$error) {
-      require_once("db.php");
-      $sql = "select username, password from login WHERE username='$username' and password='$password'";
-      $result = $mydb->query($sql);
-
-      $row=mysqli_fetch_array($result);
-
-      if ($row){
-        if (strcmp($username, $row["username"]) == 0 && strcmp($password, $row["password"]) == 0) {
-          $loginOK = true;
-        } else {
-          $loginOK = false;
-        }
-
-        if($loginOK) {
-          session_start();
-          $_SESSION["username"] = $username;
-          $_SESSION["password"] = $row["password"];
-
-          Header("Location: HMHousingoptions.html");
-        } elseif (!$loginOK) {
-          echo "<p>Make sure you have entered the correct information.</p>";
-        }
-
-      } else {
-        echo "<p>The username does not exist.</p>";
-      }
-    }
-  }
-
-
-
-  ?>
