@@ -120,7 +120,9 @@ if(isset($_POST["submit"])){
 <br />
 <br />
 </p>
-
+<p>
+  
+</p>
 <font color="maroon"  style="font-family:impact;" ><h1> <center>
 
   <body>
@@ -130,12 +132,19 @@ if(isset($_POST["submit"])){
           if(!empty($username))
             echo $username;
         ?>"
+        <p>
+
+
+        </p>
       </label><br />
       <label>Password:
         <input type="text" name="password" value="<?php
           if(!empty($password))
             echo $password;
         ?>" />
+        <p>
+
+        </p>
       </label><br />
       <input type="submit" name="submit" value="Login" />
   </body>
