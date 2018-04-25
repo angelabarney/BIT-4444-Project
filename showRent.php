@@ -3,18 +3,29 @@
 <head>
   <title>Show Rent</title>
 <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HokieMatch: Housing Options </title>
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="stylesheet.css" />
+<script src="jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 <style>
 
 .bar {
-  fill: steelblue;
+  fill: maroon;
 }
 
 .bar:hover {
-  fill: red;
+  fill: white;
 }
 
 .axis--x path {
   display: none;
+}
+
+p {
+  font-family: impact;
 }
 
 </style>
