@@ -1,0 +1,367 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>HokieMatch: Match-Up </title>
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+  <script src="jquery-3.1.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <style type="text/css">
+    table,
+    tr,
+    td {
+      padding: 10px;
+    }
+
+    td {
+      color: maroon;
+      font-family: impact;
+      size: 4
+    }
+
+    th {
+      color: maroon;
+      font-family: impact;
+      size: 4;
+      text-decoration: underline;
+    }
+
+}
+
+  </style>
+  <script src="jquery-3.1.1.min.js"></script>
+  <script>
+
+  function getSdropContent() {
+  //  window.alert("Alert");
+    var id = document.getElementById("StudentDrop").value;
+    var z = document.getElementById("contentArea");
+   window.alert(id);
+    if(id==0) {
+      z.innerHTML = "";
+    } else {
+      try {
+        asyncRequest = new XMLHttpRequest();  //create request object
+
+        //register event handler
+        asyncRequest.onreadystatechange=stateSdropChange;
+        var url="HMdisplaystudents.php?Student_ID="+id;
+        asyncRequest.open('GET',url,true);  // prepare the request
+        asyncRequest.send(null);  // send the request
+      }
+        catch (exception) {alert("Request failed");}
+
+    }
+
+    function stateSdropChange() {
+      // if request completed successfully
+      if(asyncRequest.readyState==4 && asyncRequest.status==200) {
+        document.getElementById("contentArea").innerHTML=
+          asyncRequest.responseText;  // places text in contentArea
+      }
+    }
+  }
+
+    var asyncRequest;
+    var clickCount=1;
+
+    function getsleepContent() {
+      var url = "HMdisplaytables.php";
+      if(clickCount % 2 ==1) {
+        try {
+          asyncRequest = new XMLHttpRequest();
+
+          //register event handler
+          asyncRequest.onreadystatechange=stateChange;
+          asyncRequest.open('GET',url,true);
+          asyncRequest.send(null);
+        }
+          catch (exception) {alert("Request failed");}
+
+        }
+        else {
+        //clear content
+        document.getElementById("contentArea").innerHTML="";
+      }
+      clickCount++;
+
+  }
+  function getcarContent() {
+    var url = "HMdisplaycar.php";
+    if(clickCount % 2 ==1) {
+      try {
+        asyncRequest = new XMLHttpRequest();
+
+        //register event handler
+        asyncRequest.onreadystatechange=stateChange;
+        asyncRequest.open('GET',url,true);
+        asyncRequest.send(null);
+      }
+        catch (exception) {alert("Request failed");}
+
+      }
+      else {
+      //clear content
+      document.getElementById("contentArea").innerHTML="";
+    }
+    clickCount++;
+
+  }
+
+  function getpetContent() {
+    var url = "HMdisplaypet.php";
+    if(clickCount % 2 ==1) {
+      try {
+        asyncRequest = new XMLHttpRequest();
+
+        //register event handler
+        asyncRequest.onreadystatechange=stateChange;
+        asyncRequest.open('GET',url,true);
+        asyncRequest.send(null);
+      }
+        catch (exception) {alert("Request failed");}
+
+      }
+      else {
+      //clear content
+      document.getElementById("contentArea").innerHTML="";
+    }
+    clickCount++;
+
+  }
+
+  function getliveContent() {
+    var url = "HMdisplaylive.php";
+    if(clickCount % 2 ==1) {
+      try {
+        asyncRequest = new XMLHttpRequest();
+
+        //register event handler
+        asyncRequest.onreadystatechange=stateChange;
+        asyncRequest.open('GET',url,true);
+        asyncRequest.send(null);
+      }
+        catch (exception) {alert("Request failed");}
+
+      }
+      else {
+      //clear content
+      document.getElementById("contentArea").innerHTML="";
+    }
+    clickCount++;
+
+  }
+
+  function getyearContent() {
+    var url = "HMdisplayyear.php";
+    if(clickCount % 2 ==1) {
+      try {
+        asyncRequest = new XMLHttpRequest();
+
+        //register event handler
+        asyncRequest.onreadystatechange=stateChange;
+        asyncRequest.open('GET',url,true);
+        asyncRequest.send(null);
+      }
+        catch (exception) {alert("Request failed");}
+
+      }
+      else {
+      //clear content
+      document.getElementById("contentArea").innerHTML="";
+    }
+    clickCount++;
+
+  }
+
+
+
+
+    function stateChange() {
+      // if request completed successfully
+      if(asyncRequest.readyState==4 && asyncRequest.status==200) {
+        document.getElementById("contentArea").innerHTML=
+          asyncRequest.responseText;  // places text in contentArea
+      }
+    }
+
+    function init(){
+      //var object = displaySuppliers.php;
+      var link16 = document.links[16];
+      link16.addEventListener("mouseenter", getsleepContent);
+      link16.addEventListener("mouseleave", getsleepContent);
+
+      var link17 = document.links[17];
+      link17.addEventListener("mouseenter", getcarContent);
+      link17.addEventListener("mouseleave", getcarContent);
+
+      var link18 = document.links[18];
+      link18.addEventListener("mouseenter", getpetContent);
+      link18.addEventListener("mouseleave", getpetContent);
+
+      var link19 = document.links[19];
+      link19.addEventListener("mouseenter", getliveContent);
+      link19.addEventListener("mouseleave", getliveContent);
+
+      var link20 = document.links[20];
+      link20.addEventListener("mouseenter", getyearContent);
+      link20.addEventListener("mouseleave", getyearContent);
+
+
+      //object.addEventListener("mouseout", getContent);
+
+      // var drop = document.getElementById("SupplierDrop");
+    //   drop.addEventListener("")
+
+    }
+    document.addEventListener("DOMContentLoaded", init);
+  </script>
+
+
+</head>
+
+
+
+</head>
+
+<body>
+  <form>
+
+
+
+
+
+  <a href="http://www.bit.vt.edu"><img src="Hokiematchlogo.png" /></a>
+
+  <a href="HMStudentLogin.html">Log In</a>
+
+  <nav>
+    <ul class="nav nav-pills">
+      <li role="presentation" class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+      Home <span class="caret"></span>
+    </a>
+        <ul class="dropdown-menu">
+          <li role="presentation"><a href="#">Home</a></li>
+          <li role="presentation"><a href="#">Housing Option</a></li>
+          <li role="presentation"><a href="#">Example Profile Match-Up</a></li>
+        </ul>
+      </li>
+
+      <li role="presentation" class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+    Personal Information <span class="caret"></span>
+  </a>
+        <ul class="dropdown-menu">
+          <li role="presentation"><a href="#">Personal Information</a></li>
+          <li role="presentation"><a href="#">Roommate Preferences</a></li>
+          <li role="presentation"><a href="#">Apartment Preferences</a></li>
+        </ul>
+      </li>
+
+      <li role="presentation" class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+  Admin Login <span class="caret"></span>
+</a>
+        <ul class="dropdown-menu">
+          <li role="presentation"><a href="#">Admin Login</a></li>
+          <li role="presentation"><a href="#">Profile Management</a></li>
+          <li role="presentation"><a href="#">Student Profiles</a></li>
+          <li role="presentation"><a href="#">Apartment Editing</a></li>
+          <li role="presentation"><a href="#">Apartment Renewal</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+
+
+  <center>
+
+
+    <h2>I Am Looking For Someone...</h2>
+    <h5>Hover to View Potential Roommates!</h5>
+
+    <table>
+      <tr>
+        <th><a href="HMdisplaytables.php"> Who goes to bed:</a></th>
+        <td> Early</a></td>
+        <td>Late</td>
+      </tr>
+
+
+      <tr>
+        <th> <a href="HMdisplaycar.php"> Bringing a Car:</th>
+        <td>Yes</a></td>
+        <td>No</td>
+      </tr>
+
+
+
+      <tr>
+        <th> <a href="HMdisplaypet.php"> Pet Friendly:</th>
+        <td>Yes</td>
+        <td>No</td>
+      </tr>
+    </table>
+
+
+
+    <table>
+      <tr>
+        <th> <a href="HMdisplaylive.php"> Wants to Live:</th>
+        <td>Downtown </td>
+        <td>On Campus </td>
+        <td>2 miles away </td>
+        <td>5 miles away</td>
+      </tr>
+
+
+      <tr>
+        <th> <a href="HMdisplayyear.php">Who is a:</th>
+        <td>Freshman</td>
+        <td>Sophomore</td>
+        <td>Junior</td>
+        <td>Senior</td>
+      </tr>
+    </table>
+  </p>
+
+  </center>
+
+
+    <div id="contentArea">&nbsp;</div>
+</body>
+
+<label>Pick a Student you think is similar</label>
+<select name="Student_ID" id= "StudentDrop" onchange= "getSdropContent()">
+    <option value="0">Pick a Student</option>
+  <option value="201">John Smith</option>
+  <option value="202">Bob Jones</option>
+  <option value="203">Alex Callaghan</option>
+  <option value="204">Angela Barney</option>
+  <option value="205">Kiera Coyne</option>
+
+
+</select>
+
+<div id="contentArea">&nbsp;</div>
+
+</head>
+
+
+
+
+
+<body>
+
+</form>
+
+</html>
