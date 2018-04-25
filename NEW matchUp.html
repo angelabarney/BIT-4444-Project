@@ -19,28 +19,24 @@
     td {
       padding: 10px;
     }
-
     td {
       color: maroon;
       font-family: impact;
       size: 4
     }
-
     th {
       color: maroon;
       font-family: impact;
       size: 4;
       text-decoration: underline;
     }
-
 }
-
   </style>
   <script src="jquery-3.1.1.min.js"></script>
   <script>
-
   function getSdropContent() {
   //  window.alert("Alert");
+    var asyncRequest;
     var id = document.getElementById("StudentDrop").value;
     var z = document.getElementById("contentArea");
    window.alert(id);
@@ -49,7 +45,6 @@
     } else {
       try {
         asyncRequest = new XMLHttpRequest();  //create request object
-
         //register event handler
         asyncRequest.onreadystatechange=stateSdropChange;
         var url="HMdisplaystudents.php?Student_ID="+id;
@@ -57,133 +52,109 @@
         asyncRequest.send(null);  // send the request
       }
         catch (exception) {alert("Request failed");}
-
     }
 
     function stateSdropChange() {
       // if request completed successfully
       if(asyncRequest.readyState==4 && asyncRequest.status==200) {
-        document.getElementById("contentArea").innerHTML=
-          asyncRequest.responseText;  // places text in contentArea
+        var resp = asyncRequest.responseText;
+        console.log(resp);
+        document.getElementById("contentArea").innerHTML= resp;  // places text in contentArea
       }
     }
   }
 
-    var asyncRequest;
     var clickCount=1;
-
     function getsleepContent() {
       var url = "HMdisplaytables.php";
       if(clickCount % 2 ==1) {
         try {
           asyncRequest = new XMLHttpRequest();
-
           //register event handler
           asyncRequest.onreadystatechange=stateChange;
           asyncRequest.open('GET',url,true);
           asyncRequest.send(null);
         }
           catch (exception) {alert("Request failed");}
-
         }
         else {
         //clear content
         document.getElementById("contentArea").innerHTML="";
       }
       clickCount++;
-
   }
   function getcarContent() {
     var url = "HMdisplaycar.php";
     if(clickCount % 2 ==1) {
       try {
         asyncRequest = new XMLHttpRequest();
-
         //register event handler
         asyncRequest.onreadystatechange=stateChange;
         asyncRequest.open('GET',url,true);
         asyncRequest.send(null);
       }
         catch (exception) {alert("Request failed");}
-
       }
       else {
       //clear content
       document.getElementById("contentArea").innerHTML="";
     }
     clickCount++;
-
   }
-
   function getpetContent() {
     var url = "HMdisplaypet.php";
     if(clickCount % 2 ==1) {
       try {
         asyncRequest = new XMLHttpRequest();
-
         //register event handler
         asyncRequest.onreadystatechange=stateChange;
         asyncRequest.open('GET',url,true);
         asyncRequest.send(null);
       }
         catch (exception) {alert("Request failed");}
-
       }
       else {
       //clear content
       document.getElementById("contentArea").innerHTML="";
     }
     clickCount++;
-
   }
-
   function getliveContent() {
     var url = "HMdisplaylive.php";
     if(clickCount % 2 ==1) {
       try {
         asyncRequest = new XMLHttpRequest();
-
         //register event handler
         asyncRequest.onreadystatechange=stateChange;
         asyncRequest.open('GET',url,true);
         asyncRequest.send(null);
       }
         catch (exception) {alert("Request failed");}
-
       }
       else {
       //clear content
       document.getElementById("contentArea").innerHTML="";
     }
     clickCount++;
-
   }
-
   function getyearContent() {
     var url = "HMdisplayyear.php";
     if(clickCount % 2 ==1) {
       try {
         asyncRequest = new XMLHttpRequest();
-
         //register event handler
         asyncRequest.onreadystatechange=stateChange;
         asyncRequest.open('GET',url,true);
         asyncRequest.send(null);
       }
         catch (exception) {alert("Request failed");}
-
       }
       else {
       //clear content
       document.getElementById("contentArea").innerHTML="";
     }
     clickCount++;
-
   }
-
-
-
-
     function stateChange() {
       // if request completed successfully
       if(asyncRequest.readyState==4 && asyncRequest.status==200) {
@@ -191,35 +162,26 @@
           asyncRequest.responseText;  // places text in contentArea
       }
     }
-
     function init(){
       //var object = displaySuppliers.php;
       var link16 = document.links[16];
       link16.addEventListener("mouseenter", getsleepContent);
       link16.addEventListener("mouseleave", getsleepContent);
-
       var link17 = document.links[17];
       link17.addEventListener("mouseenter", getcarContent);
       link17.addEventListener("mouseleave", getcarContent);
-
       var link18 = document.links[18];
       link18.addEventListener("mouseenter", getpetContent);
       link18.addEventListener("mouseleave", getpetContent);
-
       var link19 = document.links[19];
       link19.addEventListener("mouseenter", getliveContent);
       link19.addEventListener("mouseleave", getliveContent);
-
       var link20 = document.links[20];
       link20.addEventListener("mouseenter", getyearContent);
       link20.addEventListener("mouseleave", getyearContent);
-
-
       //object.addEventListener("mouseout", getContent);
-
       // var drop = document.getElementById("SupplierDrop");
     //   drop.addEventListener("")
-
     }
     document.addEventListener("DOMContentLoaded", init);
   </script>
@@ -355,9 +317,6 @@
 <div id="contentArea">&nbsp;</div>
 
 </head>
-
-
-
 
 
 <body>
