@@ -53,7 +53,6 @@
       }
         catch (exception) {alert("Request failed");}
     }
-
     function stateSdropChange() {
       // if request completed successfully
       if(asyncRequest.readyState==4 && asyncRequest.status==200) {
@@ -63,7 +62,6 @@
       }
     }
   }
-
     var clickCount=1;
     function getsleepContent() {
       var url = "HMdisplaytables.php";
@@ -248,8 +246,8 @@
   <center>
 
 
-    <h2>I Am Looking For Someone...</h2>
-    <h5>Hover to View Potential Roommates!</h5>
+    <h2><font color="black" size="8" ; style="font-family:impact;" </font>I Am Looking For Someone...</h2>
+    <h5><font color="white" size="5" ; style="font-family:impact;" </font>Hover to View Potential Roommates!</h5>
 
     <table>
       <tr>
@@ -298,29 +296,40 @@
 
   </center>
 
+  <center>
 
-    <div id="contentArea">&nbsp;</div>
+  <label><font color="maroon" size="4" ; style="font-family:impact;" </font>
+    Pick a Student you think is similar and see their other information!!! <br /> You can have a chance to email them!</label>
+  <br />
+  <select name="Student_ID" id= "StudentDrop" onchange= "getSdropContent()">
+      <option value="0">Pick a Student</option>
+    <option value="201">John Smith</option>
+    <option value="202">Bob Jones</option>
+    <option value="203 ">Alex Callaghan</option>
+    <option value="204">Angela Barney</option>
+    <option value="205">Kiera Coyne</option>
+
+
+  </select>
+<p>
+
+
+</p>
+<p>
+
+</p>
+  <div id="contentArea">&nbsp;</div>
+
+  </center>
+
 </body>
-
-<label>Pick a Student you think is similar</label>
-<select name="Student_ID" id= "StudentDrop" onchange= "getSdropContent()">
-    <option value="0">Pick a Student</option>
-  <option value="201">John Smith</option>
-  <option value="202">Bob Jones</option>
-  <option value="203">Alex Callaghan</option>
-  <option value="204">Angela Barney</option>
-  <option value="205">Kiera Coyne</option>
+<center>
 
 
-</select>
-
-<div id="contentArea">&nbsp;</div>
-
-</head>
 
 
-<body>
 
 </form>
 
 </html>
+
