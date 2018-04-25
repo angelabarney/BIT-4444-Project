@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>HokieMatch: Home </title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+      <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+    <script src="jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+    .btn {
+      color: black;
+      background-color: yellow;
+    }
+    </style>
+  </head>
+<body>
+    <a href="HMHome.html"><img src="Hokiematchlogo.png"  HEIGHT="75" WIDTH="250" /></a>
+
+     <a  href="HMStudentlogin.html" align="right">Student Log In</a>
+
+</body>
+
+<nav>
+  <ul class="nav nav-pills">
+    <li role="presentation" class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+      Home <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li role="presentation"><a href="#">Home</a></li>
+      <li role="presentation"><a href="#">Housing Option</a></li>
+      <li role="presentation"><a href="#">Example Profile Match-Up</a></li>
+    </ul>
+  </li>
+
+  <li role="presentation" class="dropdown">
+  <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+    Personal Information <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu">
+    <li role="presentation"><a href="#">Personal Information</a></li>
+    <li role="presentation"><a href="#">Roommate Preferences</a></li>
+    <li role="presentation"><a href="#">Apartment Preferences</a></li>
+  </ul>
+</li>
+
+<li role="presentation" class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+  Admin Login <span class="caret"></span>
+</a>
+<ul class="dropdown-menu">
+  <li role="presentation"><a href="#">Admin Login</a></li>
+  <li role="presentation"><a href="#">Profile Management</a></li>
+  <li role="presentation"><a href="#">Student Profiles</a></li>
+  <li role="presentation"><a href="#">Apartment Editing</a></li>
+  <li role="presentation"><a href="#">Apartment Renewal</a></li>
+</ul>
+</li>
+
+  </ul>
+</nav>
+<h3>Please enter information in all the fields you would like updated:</h3>
+<form name="updateApartment" method="post" action="success.html">
+
+<div>
+<label>Apartment Name:</label>
+<input type="text" name="name" value="Enter your updated name" />
+<br />
+<br />
+</div>
+
+<div>
+<label>Apartment Location:</label>
+<input type="radio" name="location" value="Downtown">Downtown
+<input type="radio" name="location" value="On-Campus">On-Campus
+<input type="radio" name="location" value="2-Miles">2-Miles
+<input type="radio" name="location" value="5-Miles">5-Miles
+<input type="radio" name="location" value="Other">Other
+<br />
+<br />
+</div>
+
+<div>
+<label>Pet Friendly?</label>
+<input type="radio" name="pet" value="Yes" />Yes
+<input type="radio" name="pet" value="No" />No<br />
+<br />
+</div>
+
+<div>
+<label># of Bedrooms:</label>
+<input type="radio" name="beds" value="1">1
+<input type="radio" name="beds" value="2">2
+<input type="radio" name="beds" value="3">3
+<input type="radio" name="beds" value="4">4
+<br />
+<br />
+</div>
+
+<div>
+<label># of Bathrooms:</label>
+<input type="radio" name="bath" value="1">1
+<input type="radio" name="bath" value="2">2
+<input type="radio" name="bath" value="3">3
+<input type="radio" name="bath" value="4">4<br />
+<br />
+</div>
+
+<div>
+<label>Rent:</label>
+<input type="text" name="rent" value="Enter your updated rent" />
+<br />
+<br />
+</div>
+
+<div>
+<label>Bus Stop?</label>
+<input type="radio" name="bus" value="Yes" />Yes
+<input type="radio" name="bus" value="No" />No
+<br />
+<br />
+</div>
+
+
+<button type="submit" class="btn btn-primary btn-lg">Update</button>
+<br />
+<br />
+</form>
+
+<footer>
+  <a href="file:///C:/Users/Alex/Documents/Spring%202017/Spring%202018/BIT%204444/FINAL%20PROJ%204444/home.html">Back to Home</a>
+</footer>
+
+</html>
