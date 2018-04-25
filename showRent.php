@@ -42,7 +42,7 @@ d3.json(<?php echo "'getData.php?Apartment_Name'";?>, function(error, data){
 
   data.forEach(function(d){
     d.letter = d.Apartment_Name;
-    d.frequency = +d.total;
+    d.frequency = +d.Rent;
   })
 
   console.log(data);
