@@ -34,9 +34,9 @@
       Home <span class="caret"></span>
     </a>
     <ul class="dropdown-menu">
-      <li role="presentation"><a href="#">Home</a></li>
-      <li role="presentation"><a href="#">Housing Option</a></li>
-      <li role="presentation"><a href="#">Example Profile Match-Up</a></li>
+      <li role="presentation"><a href="HMHome.html">Home</a></li>
+      <li role="presentation"><a href="HMHousingoptions.html">Housing Option</a></li>
+      <li role="presentation"><a href="HMExampleprofile.html">Example Profile Match-Up</a></li>
     </ul>
   </li>
 
@@ -45,9 +45,9 @@
     Personal Information <span class="caret"></span>
   </a>
   <ul class="dropdown-menu">
-    <li role="presentation"><a href="#">Personal Information</a></li>
-    <li role="presentation"><a href="#">Roommate Preferences</a></li>
-    <li role="presentation"><a href="#">Apartment Preferences</a></li>
+    <li role="presentation"><a href="personalinfo.html">Personal Information</a></li>
+    <li role="presentation"><a href="roommatePref.html">Roommate Preferences</a></li>
+    <li role="presentation"><a href="apartmentPref.html">Apartment Preferences</a></li>
   </ul>
 </li>
 
