@@ -1,0 +1,61 @@
+<!doctype html>
+
+<head>
+
+  <style type="text/css">
+  .colors  {background-color:#fff0b3;color:black;vertical-align:top}
+
+  </style>
+  <title> Display: Similar Students!</title>
+</head>
+<body>
+  <?php
+
+  if(isset($_GET['Student_ID'])) $Student_ID=$_GET['Student_ID'];
+
+  require_once("db.php");
+
+  $sql = "";
+  if($Student_ID==0)
+    $sql ="select * from students";
+  else {
+    $sql ="select * from students where Student_ID=".$Student_ID;
+    }
+  $result = $mydb->query($sql);
+
+
+
+  echo "<center>
+
+  <table>";
+  echo "<thead class =  'colors'>";
+  echo "<th>Student ID</th>
+  <th>First Name</th>
+  <th>Last Name</th>
+  <th>Budget</th>
+  <th>Email</th>
+  <th>Pet</th>
+  <th>Clean</th>
+  <th>Year</th>
+  <th>Major</th>
+
+  </thead>
+</center>
+  ";
+
+    while($row = mysqli_fetch_array($result)) {
+      echo "<tr >";
+      echo "<td> ".$row["Student_ID"]."</td><td>".$row["First_Name"]."</td><td>".$row["Last_Name"]."</td><td>".$row["Budget"]."</td><td>".$row["Email"]."</td><td>".$row["Pet"]."</td><td>".$row["Clean"]."</td><td>"
+      .$row["Year"]."</td><td>".$row["Major"]."</td>";
+
+      echo "</tr>";
+    }
+    echo "</table>";
+
+  ?>
+
+
+
+
+</body>
+</html>
