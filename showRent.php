@@ -78,5 +78,10 @@ d3.json(<?php echo "'getData.php?Apartment_Name'";?>, function(error, data){
 });
 
 </script>
+  
+ <p>
+  <a href="HMHousingOptions.html">Return to Housing Options</a>
+</p>
+  
 </body>
 </html>
