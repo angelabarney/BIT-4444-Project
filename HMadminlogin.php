@@ -35,7 +35,7 @@ if(isset($_POST["submit"])){
         $_SESSION["username"] = $username;
         $_SESSION["password"] = $row["password"];
 
-        Header("Location: HMHousingoptions.html");
+        Header("Location: HMadminafter.html");
       } elseif (!$loginOK) {
         echo "<p>Make sure you have entered the correct information.</p>";
       }
@@ -56,7 +56,7 @@ if(isset($_POST["submit"])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>HokieMatch: Home </title>
+    <title>HokieMatch: Administration Log In </title>
     <link href="css/bootstrap.min.css" rel="stylesheet" />
       <link rel="stylesheet" type="text/css" href="stylesheet.css" />
     <script src="jquery-3.1.1.min.js"></script>
@@ -163,3 +163,4 @@ if(isset($_POST["submit"])){
 
 
 </html>
+
