@@ -61,28 +61,28 @@
 
 <h3><strong>Profiles</strong></h3>
 <div class="profiles">
-  <a href="www.google.com">Add Profile</a><br />
-  <a href="www.google.com">Delete Profile</a><br />
-  <a href="www.google.com">View All Profiles</a><br />
+  <a href="addprofile.php">Add Profile</a><br />
+  <a href="deleteprofile.php">Delete Profile</a><br />
+  <a href="viewprofiles.php">View All Profiles</a><br />
 </div>
 
 <h3><strong>Apartments</strong></h3>
 <div class="apt">
-  <a href="www.google.com">Add Apartment</a><br />
-  <a href="www.google.com">Delete Apartment</a><br />
-  <a href="www.google.com">View All Apartments</a><br />
+  <a href="addapartment.php">Add Apartment</a><br />
+  <a href="deleteapartment.php">Delete Apartment</a><br />
+  <a href="viewapartments.php">View All Apartments</a><br />
 </div>
 
 <h3><strong>Login Help</strong></h3>
 <div class="help">
-  <a href="www.google.com">Update Login</a><br />
-  <a href="www.google.com">Delete Login</a><br />
-  <a href="www.google.com">View All Login</a><br />
+  <a href="updatelogin.php">Update Login</a><br />
+  <a href="deletelogin.php">Delete Login</a><br />
+  <a href="viewlogin.php">View All Login</a><br />
   <br />
 </div>
 
 
 <footer>
-  <a href="file:///C:/Users/Alex/Documents/Spring%202017/Spring%202018/BIT%204444/FINAL%20PROJ%204444/home.html">Back to Home</a>
+  <a href="HMhome.html">Back to Home</a>
 </footer>
 </html>
