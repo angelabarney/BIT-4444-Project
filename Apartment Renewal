@@ -5,20 +5,107 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Administration</title>
+    <title>Apartment Renewal </title>
+    <style>
+      .error{color: red;}
+    </style>
     <link href="css/bootstrap.min.css" rel="stylesheet" />
       <link rel="stylesheet" type="text/css" href="stylesheet.css" />
     <script src="jquery-3.1.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
 
+    function checkInputs(event){
+        var frmObject = document.forms[0];
+        var output = "Please correct the errors on the page.";
+        var checkError = false;
+
+
+      //Renewing Radio Button
+      var checked = false;
+				var rbObject=frmObject.renew;
+				for(i=0; i<rbObject.length; i++){
+					if(rbObject[i].checked){
+						checked = true;
+						break;
+					}
+				}
+
+        if (!checked){
+          output = "Please correct the errors on the page.";
+          checkError = true;
+					document.getElementById("renewTitle").style.color = "#ff0000";
+					var z = document.getElementById("theRenew");
+					var para = document.createElement("div");
+					para.className = "error";
+					var t = document.createTextNode("Please choose whether or not you are renewing your membership.");
+					para.appendChild(t);
+					z.appendChild(para);
+        }
+
+      //Membership Radio Button
+      var checked = false;
+				var rbObject=frmObject.membership;
+				for(i=0; i<rbObject.length; i++){
+					if(rbObject[i].checked){
+						checked = true;
+						break;
+					}
+				}
+
+        if (!checked){
+          output = "Please correct the errors on the page.";
+          checkError = true;
+					document.getElementById("membershipTitle").style.color = "#ff0000";
+					var z = document.getElementById("theMembership");
+					var para = document.createElement("div");
+					para.className = "error";
+					var t = document.createTextNode("Please choose which membership option you would like");
+					para.appendChild(t);
+					z.appendChild(para);
+        }
+
+        //Payment options
+        var checked = false;
+          var rbObject=frmObject.payment;
+          for(i=0; i<rbObject.length; i++){
+            if(rbObject[i].checked){
+              checked = true;
+              break;
+            }
+          }
+
+          if (!checked){
+            output = "Please correct the errors on the page.";
+            checkError = true;
+            document.getElementById("paymentTitle").style.color = "#ff0000";
+            var z = document.getElementById("thePayment");
+            var para = document.createElement("div");
+            para.className = "error";
+            var t = document.createTextNode("Please choose how you will be paying");
+            para.appendChild(t);
+            z.appendChild(para);
+          }
+          if(checkError){
+          alert(output);
+          event.preventDefault();
+          return;
+        }
+      }
+
+      function init(){
+				var x = document.getElementsByTagName("form")[0];
+				x.addEventListener("submit", checkInputs);
+			}
+
+      document.addEventListener("DOMContentLoaded", init);
+
+    </script>
   </head>
 <body>
     <a href="HMHome.html"><img src="Hokiematchlogo.png"  HEIGHT="75" WIDTH="250" /></a>
 
      <a  href="HMStudentlogin.html" align="right">Student Log In</a>
-
-</body>
-
 <nav>
   <ul class="nav nav-pills">
     <li role="presentation" class="dropdown">
@@ -55,34 +142,48 @@
   <li role="presentation"><a href="#">Apartment Renewal</a></li>
 </ul>
 </li>
-
   </ul>
 </nav>
 
-<h3><strong>Profiles</strong></h3>
-<div class="profiles">
-  <a href="addprofile.php">Add Profile</a><br />
-  <a href="deleteprofile.php">Delete Profile</a><br />
-  <a href="viewprofiles.php">View All Profiles</a><br />
+<h3>Please enter all desired information:</h3>
+<form name="apartmentMembership" method="post" action="success.html">
+
+
+<div id="renewTitle"><strong>Are you renewing your membership?(If no, please explain why.)</strong></div>
+<div id="theRenew">
+<br />
+<input type="radio" name="renew" value="yes" />Yes
+<input type="radio" name="renew" value="no" />No<br />
 </div>
 
-<h3><strong>Apartments</strong></h3>
-<div class="apt">
-  <a href="addapartment.php">Add Apartment</a><br />
-  <a href="deleteapartment.php">Delete Apartment</a><br />
-  <a href="viewapartments.php">View All Apartments</a><br />
-</div>
-
-<h3><strong>Login Help</strong></h3>
-<div class="help">
-  <a href="updatelogin.php">Update Login</a><br />
-  <a href="deletelogin.php">Delete Login</a><br />
-  <a href="viewlogin.php">View All Login</a><br />
+<div>
+  <input type="text" name ="reason" value="Enter response here"/>
+  <br />
   <br />
 </div>
 
 
-<footer>
-  <a href="HMhome.html">Back to Home</a>
-</footer>
+	<div id="membershipTitle"><strong>What kind of membership would you like?</strong></div>
+  <div id="theMembership">
+	<input type="radio" name="membership" value="1-year" />1-Year<br />
+	<input type="radio" name="membership" value="2-year" />2-Year<br />
+  <input type="radio" name="membership" value="Custom" />Custom<br />
+  <br />
+  </div>
+
+  <div id="paymentTitle"><strong>How will you be paying?</strong></div>
+  <div id="thePayment">
+  <input type="radio" name="payment" value="Cash" />Cash<br />
+  <input type="radio" name="payment" value="Credit" />Credit<br />
+  <input type="radio" name="payment" value="Check" />Check<br />
+  </div>
+
+  <br />
+  <input type="submit" name="button1" value="Submit" />
+  <br />
+  </form>
+  <footer>
+    <a href="HMhome.html">Back to Home</a>
+  </footer>
+</body>
 </html>
