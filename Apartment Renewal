@@ -15,6 +15,11 @@
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript">
 
+
+
+
+
+
     function checkInputs(event){
         var frmObject = document.forms[0];
         var output = "Please correct the errors on the page.";
@@ -102,54 +107,71 @@
 
     </script>
   </head>
-<body>
-    <a href="HMHome.html"><img src="Hokiematchlogo.png"  HEIGHT="75" WIDTH="250" /></a>
+  <body>
 
-     <a  href="HMStudentlogin.html" align="right">Student Log In</a>
-<nav>
-  <ul class="nav nav-pills">
+
+
+      <a href="HMHome.html"><img src="Hokiematchlogo.png"  HEIGHT="75" WIDTH="250" /></a>
+
+  <br />
+  <br />
+
+    <a  href="HMStudentlogin.php" align="right">Student Log In</a>
+
+
+  <p>
+
+
+  <nav>
+    <ul class="nav nav-pills">
+      <li role="presentation" class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+        Home <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu">
+        <li role="presentation"><a href="HMHome.html">Home</a></li>
+        <li role="presentation"><a href="HMHousingoptions.html">Housing Options</a></li>
+        <li role="presentation"><a href="HMExampleprofile.html">Example Profile Match-Up</a></li>
+      </ul>
+    </li>
+
     <li role="presentation" class="dropdown">
     <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-      Home <span class="caret"></span>
+      Personal Information <span class="caret"></span>
     </a>
     <ul class="dropdown-menu">
-      <li role="presentation"><a href="#">Home</a></li>
-      <li role="presentation"><a href="#">Housing Option</a></li>
-      <li role="presentation"><a href="#">Example Profile Match-Up</a></li>
+      <li role="presentation"><a href="personalinfo.html">Personal Information</a></li>
+      <li role="presentation"><a href="roommatePref.html">Roommate Preferences</a></li>
+      <li role="presentation"><a href="apartmentPref.html">Apartment Preferences</a></li>
+        <li role="presentation"><a href="matchUP.html">Find Similar People!</a></li>
+
     </ul>
   </li>
 
   <li role="presentation" class="dropdown">
   <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-    Personal Information <span class="caret"></span>
+    Admin Login <span class="caret"></span>
   </a>
   <ul class="dropdown-menu">
-    <li role="presentation"><a href="#">Personal Information</a></li>
-    <li role="presentation"><a href="#">Roommate Preferences</a></li>
-    <li role="presentation"><a href="#">Apartment Preferences</a></li>
-  </ul>
-</li>
+    <li role="presentation"><a href="HMadminlogin.php">Admin Login</a></li>
 
-<li role="presentation" class="dropdown">
-<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-  Admin Login <span class="caret"></span>
-</a>
-<ul class="dropdown-menu">
-  <li role="presentation"><a href="#">Admin Login</a></li>
-  <li role="presentation"><a href="#">Profile Management</a></li>
-  <li role="presentation"><a href="#">Student Profiles</a></li>
-  <li role="presentation"><a href="#">Apartment Editing</a></li>
-  <li role="presentation"><a href="#">Apartment Renewal</a></li>
-</ul>
-</li>
   </ul>
-</nav>
+  </li>
 
+    </ul>
+  </nav>
+  <br />
+  <br />
+  </p>
+
+
+    
 <h3>Please enter all desired information:</h3>
 <form name="apartmentMembership" method="post" action="success.html">
+  <font color="maroon" size="4" ; style="font-family:impact;" </font>
 
 
-<div id="renewTitle"><strong>Are you renewing your membership?(If no, please explain why.)</strong></div>
+<div id="renewTitle"><strong>Are you renewing your membership?  (If no, please explain why.) </strong></div>
 <div id="theRenew">
 <br />
 <input type="radio" name="renew" value="yes" />Yes
@@ -185,5 +207,45 @@
   <footer>
     <a href="HMhome.html">Back to Home</a>
   </footer>
+
+
+  <!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+#countdown {
+  font: 50px/100px Menlo;
+
+  width: 960px;
+}
+
+</style>
+<body>
+
+
+<font color="maroon" size="4" ; style="font-family:impact;" </font>
+<br />
+<label> How much longer till your subscription is up!</label>
+<div id="countdown"></div>
+<script src="//d3js.org/d3.v3.min.js"></script>
+<script>
+
+var formatTime = d3.time.format("T-%X"),
+    countdown = d3.select("#countdown"),
+    today = d3.time.day(new Date);
+
+// 9 AM tomorrow
+var deadline = d3.time.day.offset(today, 1);
+deadline.setHours(12);
+
+(function tick() {
+  var now = new Date;
+  countdown.text(formatTime(new Date(+today + +deadline - d3.time.second(now))));
+  setTimeout(tick, 1000 - now % 1000);
+})();
+
+</script>
+</body>
 </body>
 </html>
+
