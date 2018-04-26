@@ -2,10 +2,20 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>HokieMatch: Home </title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+      <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+    <script src="jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">    </script>
+
     <title>All Profiles</title>
     <style>
       table, td {
-        border: 1px solid white;
+        border: 1px solid orange;
       }
       table {
         border-collapse: collapse;
@@ -13,39 +23,94 @@
         display:
       }
       th, td:first-child{
-        color: white;
-        background-color: orange;
+        color: orange;
+        background-color: maroon;
       }
       td {
         width: 15em;
         height: 20px;
-        color: white;
-        background-color: rgb(214, 188, 205);
+        color: black;
+        background-color: rgb(255, 204, 102);
       }
     </style>
   </head>
+  <p>
+    <body>
+
+
+
+        <a href="HMHome.html"><img src="Hokiematchlogo.png"  HEIGHT="75" WIDTH="250" /></a>
+
+        <a  href="HMStudentlogin.html" align="right">Student Log In</a>
+
+
+
+
+    <p>
+
+    <nav>
+      <ul class="nav nav-pills">
+        <li role="presentation" class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+          Home <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li role="presentation"><a href="HMHome.html">Home</a></li>
+          <li role="presentation"><a href="HMHousingoptions.html">Housing Options</a></li>
+          <li role="presentation"><a href="HMExampleprofile.html">Example Profile Match-Up</a></li>
+        </ul>
+      </li>
+
+      <li role="presentation" class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+        Personal Information <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu">
+        <li role="presentation"><a href="personalinfo.html">Personal Information</a></li>
+        <li role="presentation"><a href="roommatePref.html">Roommate Preferences</a></li>
+        <li role="presentation"><a href="apartmentPref.html">Apartment Preferences</a></li>
+      </ul>
+    </li>
+
+    <li role="presentation" class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+      Admin Login <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li role="presentation"><a href="#">Admin Login</a></li>
+      <li role="presentation"><a href="#">Profile Management</a></li>
+      <li role="presentation"><a href="#">Student Profiles</a></li>
+      <li role="presentation"><a href="updateApartment.html">Apartment Editing</a></li>
+      <li role="presentation"><a href="#">Apartment Renewal</a></li>
+    </ul>
+    </li>
+
+      </ul>
+    </nav>
+  <br />
+  <br />
+  </p>
+
+<p>
+
+  
+</p>
+
   <body>
     <?php
     require_once("db.php");
-
     $sql = "select * from students";
     $result = $mydb->query($sql);
-
     echo "<table>";
     echo "<thead>";
-    echo "<th>Student ID</th><th>First Name</th><th>Last Name</th><th>Budget</th><th>Budget</th><th>Location</th><th>Pet</th><th>Clean</th><th>Email</th><th>Year</th><th>Major</th><th>Bed Time</th><th>Car</th>";
+    echo "<th>Student ID</th><th>First Name</th><th>Last Name</th><th>Budget</th><th>Email</th><th>Pet</th><th>Clean</th><th>Year</th><th>Major</th>";
     echo "</thead>";
-
-
       while($row = mysqli_fetch_array($result)) {
         echo "<tr>";
-        echo "<td> ".$row["Student_ID"]."</td><td>".$row["First_Name"]."</td><td>".$row["Last_Name"]."</td><td>".$row["Budget"]."</td><td>".$row["Email"]."</td><td>".$row["Pet"]."</td><td>".$row["Clean"]."</td><td>"
-        .$row["Year"]."</td><td>".$row["Major"]."</td><td>".$row["Bed_Time"]."</td><td>".$row["Car"]."</td>";
+        echo "<td> ".$row["Student_ID"]."</td><td>".$row["First_Name"]."</td><td>".$row["Last_Name"]."</td><td>".$row["Budget"]."</td><td>".$row["Email"]."</td><td>".$row["Pet"]."</td><td>".$row["Clean"]."</td><td>".$row["Year"]."</td><td>".$row["Major"]."</td>";
         echo "</tr>";
       }
-      echo "</table>"     
-
-
+      echo "</table>"
     ?>
   </body>
 </html>
