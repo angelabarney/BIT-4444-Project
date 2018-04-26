@@ -8,7 +8,7 @@
     <title>HokieMatch: Home </title>
     <style>
       table, td {
-        border: 1px solid white;
+        border: 1px solid orange;
       }
       table {
         border-collapse: collapse;
@@ -16,14 +16,14 @@
         display:
       }
       th, td:first-child{
-        color: white;
-        background-color: orange;
+        color: orange;
+        background-color: maroon;
       }
       td {
         width: 15em;
         height: 20px;
-        color: white;
-        background-color: rgb(214, 188, 205);
+        color: black;
+        background-color: rgb(255, 204, 102);
       }
     </style>
     <link href="css/bootstrap.min.css" rel="stylesheet" />
@@ -78,22 +78,24 @@
 
   </ul>
 </nav>
+<p>
 
+</p>
 <?php
 require_once("db.php");
 
-$sql = "select * from students";
+$sql = "select * from apartments";
 $result = $mydb->query($sql);
 
 echo "<table>";
 echo "<thead>";
-echo "<th>Apartment ID</th><th>Apartment Name</th><th>Location</th><th>Pet</th><th>Bedrooms</th><th>Bathrooms</th><th>Rent</th><th>Bus Stop?</th>";
+echo "<th>Apartment ID</th><th>Apartment Name</th><th>Location</th><th>Pet</th><th>Bedrooms</th><th>Bathrooms</th><th>Rent</th><th>Bus Stop</th>";
 echo "</thead>";
 
 
   while($row = mysqli_fetch_array($result)) {
     echo "<tr>";
-    echo "<td>".$row["Apartment_ID"]."</td><td>".$row["Apartment_Name"]."</td><td>".$row["Apartment_Location"]."</td><td>".$row["Pet"]."</td><td>".$row["Bedrooms"]."</td><td>".$row["Rent"]."</td><td>".$row["Bus_Stop"]."</td>";
+    echo "<td>".$row["Apartment_ID"]."</td><td>".$row["Apartment_Name"]."</td><td>".$row["Apartment_Location"]."</td><td>".$row["Pet"]."</td><td>".$row["Bedrooms"]."</td><td>".$row["Bathrooms"]."</td><td>".$row["Rent"]."</td><td>".$row["Bus_Stop"]."</td>";
     echo "</tr>";
   }
 ?>
