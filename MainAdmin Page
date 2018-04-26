@@ -57,7 +57,18 @@
 </li>
 
   </ul>
+
+
 </nav>
+
+<font color="maroon" size="9" ; style="font-family:impact;" </font>
+
+<center>Administration </h1> </center>
+<font color="maroon" size="4" ; style="font-family:impact;" </font>
+
+
+<center>
+
 
 <h3><strong>Profiles</strong></h3>
 <div class="profiles">
@@ -85,4 +96,5 @@
 <footer>
   <a href="HMhome.html">Back to Home</a>
 </footer>
+</center>
 </html>
