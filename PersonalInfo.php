@@ -88,6 +88,8 @@
   </ul>
 </nav>
 
+<font color="maroon" size="4" ; style="font-family:impact;" </font>
+
 <h2>Personal Information</h2>
 <img src="blankprofile.png" height="150" width="150"/>
 <p>Change Profile Picture</p>
