@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>HokieMatch: Apartment Preferences</title>
+    <title>HokieMatch: Apartment Preferences </title>
     <link href="css/bootstrap.min.css" rel="stylesheet" />
       <link rel="stylesheet" type="text/css" href="stylesheet.css" />
     <script src="jquery-3.1.1.min.js"></script>
@@ -15,7 +15,7 @@
 <body>
     <a href="http://www.bit.vt.edu"><img src="Hokiematchlogo.png" /></a>
 
-      <a href="HMStudentLogin.html">Log In</a>
+      <a  href="HMStudentlogin.html" align="right">Student Log In</a>
 
 <nav>
   <ul class="nav nav-pills">
@@ -66,7 +66,7 @@
     <select name="distance">
       <option>Downtown</option>
       <option>On Campus</option>
-      <option>1 mile away</option>
+      <option>2 miles away</option>
       <option>5 miles away</option>
     </select></label><br />
 
@@ -78,6 +78,14 @@
     <input name="bus" type="radio" value="no" />
   </label><br />
 
+  <strong>Pet Friendly?</strong>
+    <label>Yes
+    <input name="pet" type="radio" value="yes" />
+    </label>
+    <label>No
+    <input name="pet" type="radio" value="no" />
+  </label><br />
+
     <label>Number of Rooms:
     <input type="number" min="1" max="4" step="1" value="4" />
     </label><br />
@@ -86,22 +94,6 @@
     <input type="number" min="1" max="4" step="1" value="4" />
     </label><br />
 
-    <strong>Amenities:</strong> <br />
-    <label>Pool
-    <input name="amenities" type="checkbox" value="Pool" />
-    </label>
-    <label>Gym
-    <input name="amenities" type="checkbox" value="Gym" />
-    </label>
-    <label>Grill Area
-    <input name="amenities" type="checkbox" value="Grill Area" />
-    </label>
-    <label>Courts
-    <input name="amenities" type="checkbox" value="Courts" />
-    </label>
-    <label>Parking
-    <input name="amenities" type="checkbox" value="Parking" />
-  </label><br />
 </form>
 
 <input type="Submit" value="Update" />
