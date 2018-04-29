@@ -38,54 +38,58 @@
    <body>
 
 
+     <a href="HMHome.html"><img src="Hokiematchlogo.png"  HEIGHT="75" WIDTH="250" /></a>
 
-       <a href="HMHome.html"><img src="Hokiematchlogo.png"  HEIGHT="75" WIDTH="250" /></a>
+   <br />
+   <br />
 
-       <a  href="HMStudentlogin.html" align="right">Student Log In</a>
-
-
+   <a  href="HMStudentlogin.php" align="right">Student Log In</a>
 
 
    <p>
 
-   <nav>
-     <ul class="nav nav-pills">
-       <li role="presentation" class="dropdown">
-       <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-         Home <span class="caret"></span>
-       </a>
-       <ul class="dropdown-menu">
-         <li role="presentation"><a href="HMHome.html">Home</a></li>
-         <li role="presentation"><a href="HMHousingoptions.html">Housing Options</a></li>
-         <li role="presentation"><a href="HMExampleprofile.html">Example Profile Match-Up</a></li>
-       </ul>
-     </li>
 
+   <nav>
+   <ul class="nav nav-pills">
      <li role="presentation" class="dropdown">
      <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-       Personal Information <span class="caret"></span>
+       Home <span class="caret"></span>
      </a>
      <ul class="dropdown-menu">
-       <li role="presentation"><a href="personalinfo.html">Personal Information</a></li>
-       <li role="presentation"><a href="roommatePref.html">Roommate Preferences</a></li>
-       <li role="presentation"><a href="apartmentPref.html">Apartment Preferences</a></li>
+       <li role="presentation"><a href="HMHome.html">Home</a></li>
+       <li role="presentation"><a href="HMHousingoptions.html">Housing Options</a></li>
+       <li role="presentation"><a href="HMExampleprofile.html">Example Profile Match-Up</a></li>
      </ul>
    </li>
 
    <li role="presentation" class="dropdown">
    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-     Admin Login <span class="caret"></span>
+     Personal Information <span class="caret"></span>
    </a>
    <ul class="dropdown-menu">
-     <li role="presentation"><a href="#">Admin Login</a></li>
-     <li role="presentation"><a href="#">Profile Management</a></li>
-     <li role="presentation"><a href="#">Student Profiles</a></li>
-     <li role="presentation"><a href="updateApartment.html">Apartment Editing</a></li>
-     <li role="presentation"><a href="#">Apartment Renewal</a></li>
+     <li role="presentation"><a href="personalinfo.html">Personal Information</a></li>
+     <li role="presentation"><a href="roommatePref.html">Roommate Preferences</a></li>
+     <li role="presentation"><a href="apartmentPref.html">Apartment Preferences</a></li>
+       <li role="presentation"><a href="matchUP.html">Find Similar People!</a></li>
+
    </ul>
    </li>
 
-     </ul>
+   <li role="presentation" class="dropdown">
+   <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+   Admin Login <span class="caret"></span>
+   </a>
+   <ul class="dropdown-menu">
+   <li role="presentation"><a href="HMadminlogin.php">Admin Login</a></li>
+
+   </ul>
+   </li>
+
+   </ul>
+   </nav>
+   <br />
+   <br />
+   </p>
    </nav>
 <body>
   <?php
@@ -93,25 +97,20 @@
     $name = "";
     $username = "";
     $password = "";
-
     if (isset($_POST["login_ID"])) $login_ID = $_POST["login_ID"];
     if (isset($_POST["name"])) $name = $_POST["name"];
     if (isset($_POST["username"])) $username = $_POST["username"];
     if (isset($_POST["password"])) $password = $_POST["password"];
-
     require_once("db.php");
-
     echo "<table>";
     echo "<thead>";
     echo "<th>Login_ID</th><th>Name</th><th>Username</th><th>Password</th>";
     echo "</thead>";
     echo "<td>$login_ID</td><td>$name</td><td>$username</td><td>$password</td>";
-
     if ($login_ID > 5) {
       $sql = "insert into login(login_ID, name, username, password)
               values('$login_ID','$name', '$username', '$password')";
       $result=$mydb->query($sql);
-
       if ($result==1) {
         echo "<p>A new user has been added.</p>";
       }
