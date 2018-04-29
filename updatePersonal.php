@@ -39,44 +39,41 @@
 
     <a  href="HMStudentlogin.html" align="right">Student Log In</a>
 
-  <nav>
-  <ul class="nav nav-pills">
-  <li role="presentation" class="dropdown">
-  <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-    Home <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu">
-    <li role="presentation"><a href="#">Home</a></li>
-    <li role="presentation"><a href="#">Housing Option</a></li>
-    <li role="presentation"><a href="#">Example Profile Match-Up</a></li>
-  </ul>
-  </li>
+    <nav>
+      <ul class="nav nav-pills">
+        <li role="presentation" class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+          Home <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li role="presentation"><a href="HMHome.html">Home</a></li>
+          <li role="presentation"><a href="HMHousingoptions.html">Housing Options</a></li>
+          <li role="presentation"><a href="HMExampleprofile.html">Example Profile Match-Up</a></li>
+        </ul>
+      </li>
 
-  <li role="presentation" class="dropdown">
-  <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-  Personal Information <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu">
-  <li role="presentation"><a href="#">Personal Information</a></li>
-  <li role="presentation"><a href="#">Roommate Preferences</a></li>
-  <li role="presentation"><a href="#">Apartment Preferences</a></li>
-  </ul>
-  </li>
+      <li role="presentation" class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+        Personal Information <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu">
+        <li role="presentation"><a href="personalinfo.html">Personal Information</a></li>
+        <li role="presentation"><a href="roommatePref.html">Roommate Preferences</a></li>
+        <li role="presentation"><a href="apartmentPref.html">Apartment Preferences</a></li>
+          <li role="presentation"><a href="matchUP.html">Find Similar People!</a></li>
+      </ul>
+    </li>
 
-  <li role="presentation" class="dropdown">
-  <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-  Admin Login <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu">
-  <li role="presentation"><a href="#">Admin Login</a></li>
-  <li role="presentation"><a href="#">Profile Management</a></li>
-  <li role="presentation"><a href="#">Student Profiles</a></li>
-  <li role="presentation"><a href="#">Apartment Editing</a></li>
-  <li role="presentation"><a href="#">Apartment Renewal</a></li>
-  </ul>
-  </li>
-  </ul>
-  </nav>
+    <li role="presentation" class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+      Admin Login <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li role="presentation"><a href="HMadminlogin.php">Admin Login</a></li>
+    </ul>
+    </li>
+      </ul>
+    </nav>
 
   <?php
   $Student_ID = 0;
