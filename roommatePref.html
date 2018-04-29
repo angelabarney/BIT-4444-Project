@@ -1,3 +1,26 @@
+<?php
+  $Student_ID = 0;
+  $Clean = "";
+  $Bed_Time = "";
+  $Car = -1;
+  $err = false;
+
+  if (isset($_POST["submit"])) {
+    if(isset($_POST["Student_ID"])) $Student_ID = $_POST["Student_ID"];
+    if(isset($_POST["Clean"])) $Clean = $_POST["Clean"];
+    if(isset($_POST["Bed_Time"])) $Bed_Time = $_POST["Bed_Time"];
+    if(isset($_POST["Car"])) $Car = $_POST["Car"];
+
+    if (!empty($Clean) && !empty($Bed_Time) && !empty($Car)
+    && $Car != -1 && $Student_ID >=0) {
+      header("HTTP/1.1 307 Temprary Redirect");
+      header("Location: updateRoommatePref.php");
+    } else {
+      $err = true;
+    }
+  }
+?>
+
 <!doctype html>
 <html>
 <head>
@@ -17,93 +40,74 @@
 
       <a  href="HMStudentlogin.html" align="right">Student Log In</a>
 
-<nav>
-  <ul class="nav nav-pills">
-    <li role="presentation" class="dropdown">
-    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-      Home <span class="caret"></span>
-    </a>
-    <ul class="dropdown-menu">
-      <li role="presentation"><a href="#">Home</a></li>
-      <li role="presentation"><a href="#">Housing Option</a></li>
-      <li role="presentation"><a href="#">Example Profile Match-Up</a></li>
-    </ul>
-  </li>
+      <nav>
+        <ul class="nav nav-pills">
+          <li role="presentation" class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            Home <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li role="presentation"><a href="HMHome.html">Home</a></li>
+            <li role="presentation"><a href="HMHousingoptions.html">Housing Options</a></li>
+            <li role="presentation"><a href="HMExampleprofile.html">Example Profile Match-Up</a></li>
+          </ul>
+        </li>
 
-  <li role="presentation" class="dropdown">
-  <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-    Personal Information <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu">
-    <li role="presentation"><a href="#">Personal Information</a></li>
-    <li role="presentation"><a href="#">Roommate Preferences</a></li>
-    <li role="presentation"><a href="#">Apartment Preferences</a></li>
-  </ul>
-</li>
+        <li role="presentation" class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+          Personal Information <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li role="presentation"><a href="personalinfo.html">Personal Information</a></li>
+          <li role="presentation"><a href="roommatePref.html">Roommate Preferences</a></li>
+          <li role="presentation"><a href="apartmentPref.html">Apartment Preferences</a></li>
+            <li role="presentation"><a href="matchUP.html">Find Similar People!</a></li>
+        </ul>
+      </li>
 
-<li role="presentation" class="dropdown">
-<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-  Admin Login <span class="caret"></span>
-</a>
-<ul class="dropdown-menu">
-  <li role="presentation"><a href="#">Admin Login</a></li>
-  <li role="presentation"><a href="#">Profile Management</a></li>
-  <li role="presentation"><a href="#">Student Profiles</a></li>
-  <li role="presentation"><a href="#">Apartment Editing</a></li>
-  <li role="presentation"><a href="#">Apartment Renewal</a></li>
-</ul>
-</li>
-  </ul>
+      <li role="presentation" class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+        Admin Login <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu">
+        <li role="presentation"><a href="HMadminlogin.php">Admin Login</a></li>
+      </ul>
+      </li>
+        </ul>
+      </nav>
 
-</nav>
-<p>
-  <br />
-</p>
-<center>
+<font color="maroon" size="4" ; style="font-family:impact;" </font>
 
+<form method="post" action="<?php echo $_SERVER['PHP_SELF']?>">
 
-<font color="maroon" size="6" ; style="font-family:impact;" </font>
+  <h2>I Am...</h2>
+  <label>Choose:
+    <select name="Clean" value="<?php echo "<option>$Clean</option>" ?>">
+    <option>Clean</option>
+    <option>In-Between</option>
+    <option>Messy</option>
+    </select>
+  </label><br />
 
-<form method="post" action="">
-  <h1>I Am...</h1>
-  <label>Clean
-  <input name="pcleanness" type="radio" value="Clean" />
-  </label>
-  <label>In Between
-  <input name="pcleanness" type="radio" value="In Between" />
-  </label>
-  <label>Messy
-  <input name="pcleanness" type="radio" value="Messy" />
-  </label>
-
-  <table>
-    <tr>
-      <td>Someone who goes to bed:</td>
-      <td><select name="personalbedtime">
+  <label>Someone who goes to bed:
+      <td><select name="Bed_Time" value="<?php echo "<option>$Bed_Time</option>" ?>">
         <option>Early</option>
         <option>Late</option>
-        </select></td>
-    </tr>
-    <tr>
-      <td>Bringing a Car:</td>
-      <td><select name="car">
-        <option>Yes</option>
-        <option>No</option>
-      </select></td>
-    </tr>
-    <tr>
-      <td>Pet Friendly?</td>
-      <td><select name="pets">
-        <option>Yes</option>
-        <option>No</option>
-      </select></td>
-    </tr>
-  </table>
-</form>
+      </select></label><br />
+
+    <label>Bringing a Car:
+        <input name="Car" type="radio" value="1" <?php if($Car ==1) echo "checked";?> /><label>Yes</label>
+        <input name="Car" type="radio" value="0" <?php if($Car ==0) echo "checked";?> /><label>No</label>
+      </label><br />
+
+  <label>Please Enter Your Student ID:
+    <input type="text" name="Student_ID" value="<?php echo $Student_ID; ?>" />
+  </label>
 
 <p>
-  <input type="Submit" value="Update" />
+  <input type="Submit" name="submit" value="Update" />
 </p>
-</center>
+</form>
+
 </body>
 </html>
