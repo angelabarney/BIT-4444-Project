@@ -58,9 +58,9 @@
           Personal Information <span class="caret"></span>
         </a>
         <ul class="dropdown-menu">
-          <li role="presentation"><a href="personalinfo.html">Personal Information</a></li>
-          <li role="presentation"><a href="roommatePref.html">Roommate Preferences</a></li>
-          <li role="presentation"><a href="apartmentPref.html">Apartment Preferences</a></li>
+          <li role="presentation"><a href="personalinfo.php">Personal Information</a></li>
+          <li role="presentation"><a href="roommatePref.php">Roommate Preferences</a></li>
+          <li role="presentation"><a href="apartmentPref.php">Apartment Preferences</a></li>
             <li role="presentation"><a href="matchUP.html">Find Similar People!</a></li>
         </ul>
       </li>
