@@ -57,9 +57,9 @@
         Personal Information <span class="caret"></span>
       </a>
       <ul class="dropdown-menu">
-        <li role="presentation"><a href="personalinfo.php">Personal Information</a></li>
-        <li role="presentation"><a href="roommatePref.php">Roommate Preferences</a></li>
-        <li role="presentation"><a href="apartmentPref.php">Apartment Preferences</a></li>
+        <li role="presentation"><a href="personalinfo.html">Personal Information</a></li>
+        <li role="presentation"><a href="roommatePref.html">Roommate Preferences</a></li>
+        <li role="presentation"><a href="apartmentPref.html">Apartment Preferences</a></li>
           <li role="presentation"><a href="matchUP.html">Find Similar People!</a></li>
       </ul>
     </li>
@@ -104,7 +104,7 @@
         echo "<p>Your preferences have been added!</p>";
       }
     } else {
-      $sql = "update students set Clean='$Clean', Bed_Time='$Bed_Time', Car='$Car',
+      $sql = "update students set Clean='$Clean', Bed_Time='$Bed_Time', Car='$Car'
              where Student_ID=$Student_ID";
 
       $result=$mydb->query($sql);
