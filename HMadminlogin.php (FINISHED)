@@ -96,9 +96,9 @@ if(isset($_POST["submit"])){
     Personal Information <span class="caret"></span>
   </a>
   <ul class="dropdown-menu">
-    <li role="presentation"><a href="personalinfo.html">Personal Information</a></li>
-    <li role="presentation"><a href="roommatePref.html">Roommate Preferences</a></li>
-    <li role="presentation"><a href="apartmentPref.html">Apartment Preferences</a></li>
+    <li role="presentation"><a href="personalinfo.php">Personal Information</a></li>
+    <li role="presentation"><a href="roommatePref.php">Roommate Preferences</a></li>
+    <li role="presentation"><a href="apartmentPref.php">Apartment Preferences</a></li>
       <li role="presentation"><a href="matchUP.html">Find Similar People!</a></li>
 
   </ul>
@@ -110,10 +110,7 @@ if(isset($_POST["submit"])){
 </a>
 <ul class="dropdown-menu">
   <li role="presentation"><a href="HMadminlogin.php">Admin Login</a></li>
-  <li role="presentation"><a href="#">Profile Management</a></li>
-  <li role="presentation"><a href="#">Student Profiles</a></li>
-  <li role="presentation"><a href="updateApartment.html">Apartment Editing</a></li>
-  <li role="presentation"><a href="#">Apartment Renewal</a></li>
+
 </ul>
 </li>
 
