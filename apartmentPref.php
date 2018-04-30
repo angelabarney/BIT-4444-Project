@@ -17,12 +17,11 @@
     if(isset($_POST["Bedrooms"])) $Bedrooms = $_POST["Bedrooms"];
     if(isset($_POST["Bathrooms"])) $Bathrooms = $_POST["Bathrooms"];
 
-// echo $Student_ID.$Budget.$Apartment_Location.$Bus_Stop.$Pet.$Bedrooms.$Bathrooms;
+// echo $Student_ID.$Budget.$Location.$Bus_Stop.$Pet.$Bedrooms.$Bathrooms;
 
-    if (!empty($Budget) && !empty($Location) && $Bus_Stop != -1
-    && $Pet != -1 && !empty($Bedrooms) && !empty($Bathrooms)
-    && $Budget >=0 && $Bedrooms >=0 && $Bathrooms >=0
-    && $Student_ID >=0) {
+    if ($Budget >= 0 && !empty($Location) && $Bus_Stop != -1
+    && $Pet != -1 && $Bedrooms >=0 && $Bathrooms >=0
+    && $Budget >=0 && $Student_ID >=0) {
 
       header("HTTP/1.1 307 Temprary Redirect");
       header("Location: updateApartmentPref.php");
