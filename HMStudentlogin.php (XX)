@@ -56,7 +56,7 @@ if(isset($_POST["submit"])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>HokieMatch: Student Login </title>
+    <title>HokieMatch: Home </title>
     <link href="css/bootstrap.min.css" rel="stylesheet" />
       <link rel="stylesheet" type="text/css" href="stylesheet.css" />
     <script src="jquery-3.1.1.min.js"></script>
@@ -85,9 +85,9 @@ if(isset($_POST["submit"])){
       Home <span class="caret"></span>
     </a>
     <ul class="dropdown-menu">
-      <li role="presentation"><a href="#">Home</a></li>
-      <li role="presentation"><a href="#">Housing Option</a></li>
-      <li role="presentation"><a href="#">Example Profile Match-Up</a></li>
+      <li role="presentation"><a href="HMHome.html">Home</a></li>
+      <li role="presentation"><a href="HMHousingoptions.html">Housing Options</a></li>
+      <li role="presentation"><a href="HMExampleprofile.html">Example Profile Match-Up</a></li>
     </ul>
   </li>
 
@@ -96,9 +96,11 @@ if(isset($_POST["submit"])){
     Personal Information <span class="caret"></span>
   </a>
   <ul class="dropdown-menu">
-    <li role="presentation"><a href="#">Personal Information</a></li>
-    <li role="presentation"><a href="#">Roommate Preferences</a></li>
-    <li role="presentation"><a href="#">Apartment Preferences</a></li>
+    <li role="presentation"><a href="personalinfo.php">Personal Information</a></li>
+    <li role="presentation"><a href="roommatePref.php">Roommate Preferences</a></li>
+    <li role="presentation"><a href="apartmentPref.php">Apartment Preferences</a></li>
+      <li role="presentation"><a href="matchUP.html">Find Similar People!</a></li>
+
   </ul>
 </li>
 
@@ -107,11 +109,8 @@ if(isset($_POST["submit"])){
   Admin Login <span class="caret"></span>
 </a>
 <ul class="dropdown-menu">
-  <li role="presentation"><a href="#">Admin Login</a></li>
-  <li role="presentation"><a href="#">Profile Management</a></li>
-  <li role="presentation"><a href="#">Student Profiles</a></li>
-  <li role="presentation"><a href="#">Apartment Editing</a></li>
-  <li role="presentation"><a href="#">Apartment Renewal</a></li>
+  <li role="presentation"><a href="HMadminlogin.php">Admin Login</a></li>
+
 </ul>
 </li>
 
@@ -120,7 +119,6 @@ if(isset($_POST["submit"])){
 <br />
 <br />
 </p>
-<p>
   
 </p>
 <font color="maroon"  style="font-family:impact;" ><h1> <center>
