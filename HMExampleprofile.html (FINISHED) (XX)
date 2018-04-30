@@ -5,22 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>HokieMatch: Example Profile </title>
+    <title>HokieMatch: Home </title>
     <link href="css/bootstrap.min.css" rel="stylesheet" />
       <link rel="stylesheet" type="text/css" href="stylesheet.css" />
     <script src="jquery-3.1.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
   </head>
-
-</style>
-<script src="jquery-3.1.1.min.js"></script>
-<script>
-
-
-</script>
-
-
 <body>
 
 
@@ -54,9 +45,9 @@
     Personal Information <span class="caret"></span>
   </a>
   <ul class="dropdown-menu">
-    <li role="presentation"><a href="personalinfo.html">Personal Information</a></li>
-    <li role="presentation"><a href="roommatePref.html">Roommate Preferences</a></li>
-    <li role="presentation"><a href="apartmentPref.html">Apartment Preferences</a></li>
+    <li role="presentation"><a href="personalinfo.php">Personal Information</a></li>
+    <li role="presentation"><a href="roommatePref.php">Roommate Preferences</a></li>
+    <li role="presentation"><a href="apartmentPref.php">Apartment Preferences</a></li>
       <li role="presentation"><a href="matchUP.html">Find Similar People!</a></li>
 
   </ul>
@@ -77,6 +68,7 @@
 <br />
 <br />
 </p>
+
 <font color="maroon"  style="font-family:impact;" ><h1> <center>FIND YOUR PERFECT MATCH </h1> </center>
 
 <center><h2>You are able to hover over names</h2> </center>
